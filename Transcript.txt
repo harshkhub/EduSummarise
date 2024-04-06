@@ -1,0 +1,1603 @@
+    Right. Remember the story I told you in the first week, Storage system, file system and database system?
+    So. So today, let's build the foundations for foundation for database system.
+    But I started talking about the storage system, and eventually data will go there.
+    Right, right, right. Storage. Star system.
+    Data management. He went to the data store in the storage. We need to understand our storage systems.
+    A key a key concept coming out of a storage system is the control of block block B, arrow, c k, So to stress storage systems are Brock devices.
+    Okay. I can give you I can give you some detail right away.
+    You can log into EC2. Hey, you might want to follow along.
+    So. Looking to see to down the way.
+    I can give you some some examples, some example on blog on our blog I that.
+    So like I said, slow, slow, slow, slow, slow. Something here. Now, if I sat down here, right, and they'd have a database that's running on top of it.
+    So if our system looking down here, looking at a star system, is looking at a bunch of blogs,
+    not individual bias, can I give you the picture by looking at a block?
+    Anyone? Any way I happen to know the block size. Typical block size for killer by walking about how typical.
+    So whenever you lead, you're leading for killer by know reading individual by.
+    Even though you only need to buy by your reading type, you need to have block your writing, writing and higher broadband for all devices.
+    And some give you, some give you to file. I can't. Let's see if I can give you an example.
+    Why don't. Why don't I combine the two lectures together? That's why we're talking about a star system for our system today.
+    And I think these two are so inter, so, so connected by.
+    So like I said, file system looking down, looking at a bunch of block.
+    Now, if you saw this file, write this file.
+    Okay. Okay. I can do the stat that the file name.
+    Okay. So, hello.
+    The test is a file in our file system. People agree it's a file in the file system.
+    Right. So in the file system, in the stack, man, what does that command do?
+    That program. A step program static means.
+    What does that mean? Can you tell?
+    Can tell if on the phone. A manual. What?
+    That's what that's said. Sad. Steady me status?
+    Yeah. Basically printing powder.
+    Okay, maybe quartering here. So if I do the city.
+    Hello? That. That's what I'm looking at. I'm looking at data on metadata.
+    When I do the a camera, I'm looking at data.
+    Right. And this particular file has how many lines of test?
+    Three for as long as one. Hello.
+    Well, we're looking at a contact. We're looking at a contact of while we're looking at data.
+    And someone give me the metadata. What it will be the metadata exemple was all metadata about this file.
+    Size of. Wow. Okay. What? I can't.
+    What can you tell me? The size of a file for a six?
+    What is what? Well, we'll be we'll be the manager won't be the unit here.
+    What is it? Killer buys alibis for it takes one buys.
+    This file has how many buys? 46 were buys.
+    So there will be the size of what? I'll just file.
+    Yeah. So file size is metadata and data. What is it?
+    What would you say we have to do to define metadata?
+    So what is the metadata data? Okay, so.
+    So information about the data. Right.
+    So this is a file size. This metadata is now data here with the content of file.
+    Any other example of metadata? One more example a day and we need a more Well, we'll come back to this to this,
+    to this pre now so I know you're not I know any more without looking at it.
+    It's just someone give you the file. Why give me, give me two examples of metadata.
+    One you just told me is file size. I will be the author who create a file.
+    Right? Yeah, that would be fine. Maybe you want a file name, right?
+    File name is metadata data. Melody.
+    It sounds good. Yeah, I think that's, um.
+    We will.
+    We we will make a big deal out of the out of all of the difference between metadata and the data, as we will see in particular when we get to address.
+    Okay. Remember last time we sent it out, right as it was, has three servers running.
+    Everyone remembers three servers running. When you do two apps, what are three servers running?
+    They know. They don't know. And secondly, they know anyone.
+    So which knows all data, all about motivation, of which no source data, which server stores data.
+    They don't know why They don't know which.
+    No stores metadata. Yeah, they know.
+    And they know all that data. Secondary Nano actually just stored some kind of log at OGE.
+    Log. How many people know something called law allergy like web server law where similar to that.
+    So periodically the logs kept the logs.
+    Cab in a name? No. I logged a copy over to secondary channel.
+    So you have additional copy to protect in case something law or something something bad happen to Nino.
+    So you allow you to recover from secondary. They know by law.
+    Okay. We can talk more. So now let me go back to the original question I'm having.
+    Can someone tell me for on the play now, what could you tell me to I or what does I mean?
+    I Obra I Obra I owe being What does I owe me input or input means rela o means what I put means what writing leading for on story device and writing.
+    Okay. And I hope that 40 and 86.
+    What numbers that. For.
+    Killer whale Megabyte. This is a killer.
+    I agree. How many people agree this before Killer by? Yeah, I know.
+    If you hesitate to raise hand. Owen probably miss the first week was I week we talk about one kilobyte.
+    How many buys? How how many buys are there in one kilobyte?
+    Thousand. 24. 44. 24.
+    24. Yeah. Which is to. To that. Which power.
+    Yeah. So this is how many kilobyte for what times.
+    What what times. Yeah.
+    For the United States is. Yeah. We can check what happens.
+    Power 2449 six.
+    So I guess that that wasn't my point. So this particular file occupy how many blocks already you actually not occupy, but.
+    Well, our system system already has already allocated how many blocks for this particular file.
+    Can you tell what I'm highlighting? Can you see what I'm highlighting?
+    A Bronx. Okay. Each park has how many buys?
+    What is a size eligible for kilobyte.
+    So our system is what has been very generous.
+    Y you want for the small file? The file as more s 46.
+    Why killer by all buys by the already allocated 32.
+    What? The 30 to 32. What it buys our killer by killer by the space.
+    Okay. Yeah. How many people get a point again?
+    My point is the key concept of block. Did I just convince you assets In looking down the solar system, You're looking at a bunch of Broadway.
+    Did I convince you? Yeah. And this progress of our system actually are to a system here to allocate a block's blocksize as a fork.
+    All right. And this blocksize will I? And oh, when it will reach.
+    I mean, it's impolite when early and when they write, you are writing how much data and how much data.
+    I owe Brock. I owe Brock. So when you're reading Cobra, which is how much data.
+    Okay. Yeah, I think I need you to know. So get him back to the storage system we're looking at.
+    We have some dishes. We're going to have some discussion here. But again, keep in mind that we're not talking about star systems per se.
+    Well, we need to understand the system. But eventually, the discussion and discussions here.
+    With your help, I hope that they're going to have have us understand the US by how I understand the concept of blogging.
+    F.D.A. I think that's going now.
+    Okay. So let's start with the discussion. If you look at your letter and the chances, the chance is that you are going to have,
+    as I said, the SSD, how many people have SSD know that you have SSD in a letter?
+    Yeah, but what is the SSD? So yeah, if you power off your laptop, what happened to the data in SSD?
+    Are they still there? Yeah. So persistent storage, right?
+    Yeah. On the other hand, if you pull it off and you forgot to save the content of your Microsoft Word.
+    What happened to the content you forgot to say is going to disappear.
+    So the content is the main memory. Okay. When you when you were a programmer.
+    Okay, let's say you're working on your homework one, homework one and you're done.
+    You're working on homework. And you go, you're using Microsoft Observer.
+    So your home one solution is called something like, I don't know, that's a1a humble one dot deal.
+    What is it? Docs. Yeah. Okay. And do you put it there?
+    Then you double click on the file as we want Docs which program which software are going to star?
+    Michael. All one word, right? Yeah. They're probably gonna leave your file into the main memory.
+    Can I. Can I have you pick of that picture of your do your homework one dog used to be used to.
+    Well is sitting on your SSD, Right.
+    C LSD when you use when you actually adenine a file is led into the memory by the software.
+    Okay. I think that's what's going on so that you can work on your protocol, your homework.
+    Right. Then once you are done, you're going to save.
+    Okay. Now you the tertiary though so let's think about it.
+    SSD versus me Memory.
+    Which one's faster? My memory.
+    Yeah. Otherwise, why don't you just biologically work work on the data on the SSD?
+    You guys have become there your, your works, your staging area.
+    I know is that your data need to be read into,
+    into the main memory so my memories are faster than what so that the second
+    area that your primary OC anyone still have hard disk still using hard disk
+    but that's probably not you know which one is faster SSD or hard disk SSD people are still using hard hard disk drive for maybe for archival purposes.
+    I have a steal. Right.
+    Which one's more expensive and the same size, same storage size, capacity SSD, or how disk, how they scale.
+    I think one terabyte SSD. How much is one Taliban SSD? Anyone?
+    And any idea one terabyte SSD, 75 boxes and 100 and I think the whole hat is quite probably one cheaper.
+    Right. So do you 40 something like that. So I think going to.
+    So my memory SSD in a heartbeat because I think that's also something called cash.
+    Cash. What is a cash. What is cash?
+    CPU cash in particular. So eventually he was getting data on where one category I mean, most of on cash and cash and cash was just a memory.
+    Which one's faster cash. Yeah. And which was more expensive.
+    Same, same, but the same capacity. Cash.
+    You see the same idea.
+    So in terms of access to access time is that is the person that is there quantify the speed of speed of getting speed of data transfer.
+    Right. So so a time taken before I should say time taken before the device is ready to transfer the data access time.
+    Ready. Ready? Not. Not. Not. Not. You in charge for extra transport.
+    So you look at SSD. Let's get a scaled way.
+    25. So if someone tell you, think about this.
+    Give someone to have someone give you a device storage device.
+    And. And telling you that access high is 50 nanoseconds, which device?
+    Most likely it is that which which kind of device may memory.
+    Okay now what what does nanosecond me one the how many nanoseconds are there in one second.
+    One over one 1 billion hour.
+    Yeah. Yeah. So ten to it always power niya.
+    So you got to have a nanosecond and a thousand Attosecond is how much is how is what.
+    Second is microsecond.
+    A thousand microseconds is one millisecond.
+    Yeah. Okay, maybe another question. Now the other person coming out to you and say I have a device and access time is 30 microsecond.
+    30 microsecond. Which device are most likely is going to be SSD.
+    So and the last person say, Oh no, I have yet another device.
+    Right. And access time is 10 milliseconds.
+    Which one? 10 milliseconds. Hard disk drive people see that time millisecond is a ten millisecond right millisecond.
+    So we we getting idea nanosecond. You're talking about my memory or cache.
+    Am I right? Microsecond You're talking about what device.
+    Microsecond. Most likely to be one Microsoft SSD.
+    Right. Maybe start with it's nanoseconds here and nanosecond here.
+    Then microseconds thousand thousand. We use three lots, we orders and then go back to do that.
+    Right. Narrow Michael and a one millisecond millisecond.
+    You have one hard this is why microsecond.
+    I Now nanoseconds is going to be one. Memory.
+    Question I was wondering. Okay.
+    I think that's that's going up. We know the IUD.
+    Do we know the IUD? What's the IUD? I probably tell you to tell you.
+    Didn't I tell you when we talk about. So I see these gray are created.
+    Meaning that. Yeah. As I was to started revise allow you to create something new.
+    I put something there. I mean, get something out.
+    You. Or use a kind of important update or why?
+    Okay, we're going to make a big deal out of this in the case of an SSD.
+    When you get back to brand SSD, I mean brand new SSD.
+    Okay. Then. But I knew that there's no data.
+    I mean, depending on how you define a data base, you mean there's no data brand, right?
+    No data. Need to be careful with that.
+    But assuming that no data, then you're going to lie data to date sachdeva later, you change your mind.
+    You're going to change the data that's called lie or lie. Our life as a city doesn't like to be overlooked.
+    For some reason, I think that's the one of the things we want to understand.
+    So as a city has limited something called p e cycle p e p slightly.
+    Anyway, I happen to know p e cycle p slash e p means what program relies writing?
+    E means what? Anyways.
+    Yeah. You know, before you all were white, you actually erased the entire block.
+    We will see. Okay, so. So it's a motivation. So I. More discussion on the over why.
+    And two terms. We like it understand.
+    One is the bandwidth, the airlines latency. Now, latency is the time you spend in doctor's waiting law.
+    You see the doctor, I see you've got to see your doctor.
+    You're waiting in a in a large in in a waiting room at that lounge.
+    Right. Yeah. So they're sitting in the couch.
+    You spend like a 10 minutes waiting there. That's your latency data latency.
+    You're waiting. Nothing for nothing.
+    Not no real thing happen, right? A doctor having the doctor have.
+    Doctor has not. Has nothing. Has not seen you yet.
+    Okay. There you are. That some nurse, right, Joe?
+    I use your term. They then you go to to some some room.
+    I like that operation room.
+    And Doctor, we're you. I mean, this is awesome.
+    Okay, so I guess what I'm trying to say is, what I want to trying to say is two things.
+    Devices need to get ready before you can re and why people agree.
+    That's the time. That. Which time? What time is it?
+    Latency. Latency was devised very fully and rely on latency.
+    Include that you're looking for the data you're trying to overlay. People agree if you all you try to read right you know.
+    Here's what I'm reading. The data is all the data, but the device somehow needed in the case of this disk device.
+    But this hard disk is why that need to I had a disk had need to move to that area.
+    People see what's going on. Yeah, there's still old divides, but it still allows the old device to allow you to think about it.
+    So this cat needs this cat white hat.
+    How many hundred people use Because that way of equal before because separate?
+    Yeah, you know what I'm talking about. Yeah, essentially. But that is that the I had a need to move to to that earlier in the case I had
+    they store that take a time today to understand what's going on That's a latency.
+    The data I'm leading is over there so it'll take y millisecond for me to, to go from the beginning position of the hair to they they start transmit.
+    Let's start to read how far I can read is governed by what is determined by what.
+    Families. Families? That makes sense. Well.
+    Anyone not having Internet service at home?
+    No one has some kind of Internet service.
+    Do you know the bandwidth of your Internet service? Do you know the bandwidth of the Internet service?
+    What, what's what, what, what service did you. Did you purchase? Yeah.
+    Give me a give us an idea. You have a 5050 megabyte, megabyte or megabits?
+    Probably more likely to be paid. So let's say 100 megabits per second.
+    Yeah, that's the bandwidth. That's how you can transmit that data through the wide road, for example.
+    Same thing here. Okay. But instead of bits, we are going to say buys.
+    That makes sense. Yeah. But I think that my my, I think my spectrum I'm using spectrum and I think that's is the Time Warner spectrum.
+    But anyway, so I have a 200 megabits per second.
+    It's not by the marketing. It's not I don't think it's five megabit.
+    How many buys? How many basing by six or eight.
+    So 200 megabyte really is 200 divided by one a.
+    If you like. It's nice. Yeah. So good.
+    Can I. Can I have. Can I give you that 2/10?
+    Why is the bandwidth. The other one is what? Latency.
+    Okay. We're going to have more detail on that.
+    Fast forward to the holiday season.
+    Why again, when we're not trying to understand how do I per say, we're not judged?
+    I don't want we don't want to take it upon us. Now we component it, but we want to do some kind of performance modeling,
+    I guess some idea about reading and writing and something called sequential re and randomly.
+    I think probably there's more useful that way.
+    If you think about that way so hard is why rotate by has if you look at a component has number or plateaus prior to how many practice that you have.
+    Well, how about this one? How many predators? Three pairs.
+    You can tell right away. We've had. Now, can I tell you that each predator has two recording services?
+    Can I. What? We're at a tool of cutting services.
+    If you look at this spread of. How come you have to do cutting services?
+    Why is right here on the top. The islands. Where? At bottom.
+    Yeah. Right underneath. Yeah. To the goddesses.
+    Which means Aqui Prado has. How many has.
+    Oh, can I. Can I take each Prada? How many Prada do I have?
+    Three. No damage. Zooming.
+    Zooming here. So if you look at their particular disk, you just told me there are three predators.
+    Can I tell you that? So if you look into the hacked assembly desk somewhere, you're going to look at something like that.
+    Okay. So if you have a I don't know, sir, do I have a piece of paper somewhere?
+    Like, think about this is a disk at this platter. Okay. Then you're going to have this Cadillac there.
+    That makes sense. So how many has the. You have one on the top of the island or one bottom?
+    Right. So you can leave on the tall lee or round at all.
+    You can also read and write four on the bottom.
+    So with that said, could you now tell me how many? How many How many has six has.
+    Yeah. I won't get in this six has. Fine.
+    I think the screen now and the disk had a slightly smaller like a wiper that the ring ring wiper.
+    On your on your, on your car. I look out the window.
+    Your people see what I'm talking about. Yeah. It's just like that. Like, like that predator rotate, rotating, rotated by spindle.
+    Okay, let's take. And those are.
+    This is a magnetic magnetic devices. So I could zooming a little bit somewhere else, call it liquid.
+    Looks something like this, Right? So, for example, up arrow means one dial will be one zero.
+    So this will be one zero and 111.
+    And this one we want zero. So if you just need a sensor to sensing that election law, the field.
+    Right. That makes sense. But if you're writing, could it be possible you're going to.
+    Could it be possible you're going to change the direction? Could it be possible?
+    Change in changing direction means one. Yeah.
+    Yeah. 24 1120. All zero back two one, two.
+    One way. Makes sense. Basically, Louis and the right leaning right.
+    Going to. And this is a location.
+    Location used to be a typical, let's say, let's say a particular hockey school twice locating a slot not located at 10,000 R.P.M.
+    That's on a standard tank here. What does 10,000 RPM? What did I hear?
+    Me? Notations per minute.
+    Yeah. Now, if. If that's why it's rotating at a particular speed.
+    10,000 rpm. Could you tell me that? How long does it take for one complete rotation?
+    One for location. How long does it take? Six.
+    Yes, that's right. Yes, that's right. But you can pretend you don't see that.
+    Why is six a millisecond? Because one minute means one minute.
+    How many? How many minutes I can. 60 millisecond MRI and you can do 10,000 location.
+    So every rotation take how long? 60 minutes, you know, right away.
+    Hard disk drive is leaving the living leaving or milliseconds by milliseconds.
+    Excess time millisecond. Not our first.
+    Labor market here. So what's going on is each Prada is either how many Prada can you can tell me how many proud of this?
+    Three. How many? How many has six?
+    We already know that. Now, can I tell you that each proud to that that each recording service is further divided into.
+    You see the yellow tax, the yellow, the yellow circle here, those one particular check.
+    Now we can we can actually see how many. I don't know. Maybe one, two, three, four, five, six tax.
+    Can I fix check? So every service has a six.
+    Tax means fine.
+    So I think that we serve as a six check. We check is followed divided into something called what sectors?
+    Sector. But the but but but careful with that one sector this is one particular sector is here the sector
+    sector this it doesn't mean this this this burst your birthday cake you slice of birthday cake.
+    Sector no is this a segment of check people getting what I'm trying to say?
+    Yes. It's like in a. Just just just what what I highlighting here what I'm what I'm trying to to to point you
+    now particular is one sector and sector size in modern July is typically one for why.
+    Wah wah wah pies. All for something for kilobyte.
+    Okay. But whenever you're reading or writing, you must read at least one sector.
+    But sometimes it's like assuming that every block is one sector, so the block size will be one.
+    For Calabar. But sometimes when you configure the device, you can say, I want to have a larger block size and we broadcast to sector four sector.
+    If it's a two sector down block size, what we want is for a killer buyer.
+    I mean, no, assure me I would practice one sector.
+    The only case sector is a small unit with.
+    Small units of that. That's right.
+    I think is. So what I guess what I'm trying to say is when we're reading and writing, you're leading an entire sect like that, that you're not.
+    Right. You know, leading individual buys, but the entire sector.
+    Okay, So I think there's anything else I want to say. Okay.
+    So something close to this from Wikipedia. So d annotate the files at annotate.
+    Why doesn't the device need some way to identify a particular sector?
+    Right. People. See, you want to say. There are so many sector here.
+    You need to some kind of addressing that, some kind of address.
+    Just like I don't know how many houses here, but every sector is a house.
+    Every house has an address. Every Saturday, Zulum.
+    Every room has some kind of address. People agree. What is.
+    What is that? What is the name with this long as well as G and what numbers?
+    Yeah. So something like this? Not now. Now, one particular particular adjusting scheme is called c HS.
+    C means what? Cylinder. Yes.
+    And let's understand what's going on here. So this this dark one is trying to say the blue think he like the blue think he is is one cylinder.
+    Okay. I should say, though.
+    I should say the checks. All the check in. All the check here.
+    Okay. Let's see how hot, hot, hot, hot.
+    I say this. But can I say cylinder is a three dimensional concept?
+    Can I. A cylinder? Okay. Now, can someone somehow tell me.
+    In this particular devise a cylinder hack. A cylinder consists of how many checks?
+    How many checks? One cylinder.
+    Okay. Anybody fancy Linda? In this case? A cylinder is A cylinder consists of a chair.
+    Consists. Consists of a concentric attack. What is what does a concentric me concern?
+    What is it? What does it determine? Concentric.
+    I don't know how many track the cylinder has, but all those checks are located on a same distance.
+    Locate at the same distance from where? On the center.
+    Yeah. Okay. With that, could you tell me that one cylinder has how many check in safety checks?
+    Yeah. So that we can. We can see that yellow.
+    Yellow check underneath has another one, Another yellow, another one underneath.
+    Can I. And I said the same thing here.
+    One cylinder. Okay. So I guess what I'm saying is that a seat in this seat address.
+    Why? There are three components. First, I want to see what I see.
+    Me what I see me cylinder.
+    If someone tell you it, the question how many cylinder does this device have?
+    Has. How many cylinder does it have?
+    One, two, three, four, five, six.
+    People see what I'm saying? Cylinder So some attribute a cylinder, you know, you narrow down now you narrow down to how many checks.
+    We can even have a in number. Right. So this is zero one, two, three, four cylinder number four.
+    Can I. So this isn't the number four.
+    If someone tell you now that your check is located, a cylinder number for you narrowed down to search your search key.
+    One of how many checks? Six checks.
+    Okay, then some photo. Tell you the head number this device has.
+    How many have? Six Has. Can I say zero to where?
+    Five. Okay, so zero be here. One will be under that one to that.
+    And this will be to. What number is that?
+    What is what is that? What is a number that have two, three and a four?
+    One, two, one, five. Okay. Now see is what he would say.
+    Zero, one, two, three, four. C is for OC.
+    Question C is for H is.
+    To which check are we looking at? Do we know which attacker we're looking at with the edge?
+    Do we know? Yeah, we know. Right. So maybe you were looking at this.
+    People agree. Then the last thing you think you need to know is what they ask.
+    What does ask me? Sector.
+    Okay. See a chart? Sanskrit. In a case of stress.
+    And you started it. Let's say your. You have to date on those.
+    Y y is here some little bit over there.
+    They both machine. Both machine using hard basically to destroy right there in addition to CO2.
+    So you probably need to say which machine which they don't know by be identified by IP address people people people see what I'm saying.
+    Me we've got to hopefully that that give you some picture here.
+    Hi. Little bit more be more examples is device.
+    Yeah. A question for the question what's it. So what's the difference The track of the cell nerves or both the.
+    Yeah, I guess the question is what would be the difference? Well, the how checks relate to cylinder cylinder.
+    Okay. So in this case, again, if you think about cylinder as three dimensional concept.
+    Yeah. So check is to concept, right?
+    Yeah. So. So in particular this, this blue cylinder, the blue cylinder, you see that both cylinder Right.
+    Consists of how many checks. One year.
+    That year consists of all the yellow text. So we see three.
+    We can see you three right underneath the yellow.
+    The yellow one, right? Yeah. So I think this cylinder consists of a number checks.
+    Any other questions? Yes.
+    I think I think the point here is that somehow that the wires need to locate some kind of some way to locate a particular
+    storage area by smart as a storage area is sector circular backed by a need to you need to be able to say number one,
+    number two, number three, like some kind of address.
+    Okay, So now in this case, this predator has how many tracks?
+    One track. This track has how many sectors to our sectors.
+    Right. Now let's look at a location or latency somehow a situation like this.
+    So you're trying to lead. Let's see. Okay, I should tell you.
+    So that device rotating in one direction, this particular device rotating what direction?
+    Counter or clockwise? Counterclockwise.
+    People. People with me can't go to work clockwise.
+    Okay, well, that's that takes care that assuming a desk had a supply at the beginning or sector say so we need to know the sector.
+    So sector zero is from the sea.
+    Rotating this way while rotating this way. So there's fixed the skiing here.
+    So Sector zero is. How about this?
+    Six. Okay. Sector zero is from here to right for sector one.
+    That makes sense. And sector wise to the starting sector.
+    One staff, one here to lobby for what? Secretary.
+    Where does that desk head is lie at the beginning of which is ACTOR six.
+    If you zoom into a device now, a tiny area between sectors that are not record energy, no known recordings.
+    Nonetheless, that gap is not is non recording cannot be magnetized.
+    Okay. So. They have that using that to know to stop just the start of a particular sector or something like that.
+    I guess a question here, we can understand the rotation or latency, so why would it be rotational latency?
+    Question Because I'm gonna give you the scenario that, that there will be some waiting time before you can leave particular sector.
+    Give me a sector example sector where you need to wait. You need a waiting the waiting room.
+    But if we are leading sector Y, how long, how long approximately how long would you would need to wait it tell me to.
+    Yeah. Almost for location is almost.
+    Almost, almost. So essentially you need to. We are leading sector y and you need a way and your sector for a lot to underwrite under what they had.
+    That makes sense. Yeah. So. But that.
+    Can I tell you, sacrifice. And although actually worst case could you could you make it make its decision your worst.
+    To Leszek the why while disco had always on rely on the lie at the beginning of this sector, six may require you to do almost four rotation almost.
+    Can you make it even worse on that or the almost you want poultry even more closer to full rotation.
+    I can. I can I can. I can hear you. Assuming we are leading had we are leading sector six.
+    Okay. But the had it just one one bit paths one.
+    Sector could happen, but they just won't be today.
+    And you need to restart. You can live on the what?
+    The beginning. How many people had the picture, right?
+    Yeah. So in that case, put a match for location.
+    All right. So worst case, one for location. How many people can we use?
+    One for a location. Worst case can be the best case scenario.
+    Give me the sector that you are leading that you don't have.
+    That would be the best case. That's a six way.
+    Six. It's right there.
+    Right. So the latency will be what will be latency? Zero.
+    Best case zero. Worst case. Poor location, average.
+    Only we don't know which one reading. Yeah. We might be leading sectors with this kind of system when maybe leading an unknown sector say,
+    well, a and take a lot of cases and develop a number of cases.
+    So I will be the average. Give me that in case you have you have to know to be half.
+    Okay. So getting back to the device, if the device allowed you to add this particular question.
+    Yeah, that's a good question. The question is why? Why? Why? Just one way location.
+    Yeah. Any take any any thoughts?
+    People see the question, why are the devices rotating on any one direction?
+    Celebrity. More uniform.
+    Any. Any. As any other force.
+    We just do things that would drive operates in that direction.
+    Okay. Okay. So that was happening in both that direction.
+    So in this case. Well, let's say.
+    So this device is rotating. What dialog you have with counterclockwise.
+    Right. Let's say you also want to rotate in clockwise.
+    Yeah. What would that happen? How would that. How would you make that happen?
+    You need to slow down to stop and then pick out a speed.
+    Why would that be a bad idea? Inefficient and inefficient y y to be inefficient or increase latency.
+    And it could also be dangerous to do. Could it be also dangerous to do?
+    We don't know. Right. So. So essentially, think about a highway. How many people are dying on I-10?
+    I'd say Interstate ten here. Did you ever going back were.
+    I wanted to drive backward. And you need to slow down. You know, turn it back.
+    Why does it take time? You would take time and pick up speed.
+    And because you're driving very high speed. It's pretty.
+    Pretty high speed here. That makes sense. I think probably that's intuition.
+    Yeah. So one direction. Okay.
+    So, Eric, do we do we have agreement the original or so for this device particular device, 10,000 rpm device.
+    Could you tell me to switch location or latency. Assuming that we do not know which sector we are looking for and do not know where the head is,
+    we milliseconds people agree with on whether that that met.
+    Okay. Now the other time latency is something called seek.
+    Okay. Seek latency you can seek. Could you tell me how many tractors they have?
+    Does this particular Prada have? How many?
+    How many? Three. Okay. Now, if a disc had is in innermost track, could you tell me the best case scenario?
+    And the worst case scenario in terms of seek?
+    Seek is seeking what is looking for no sector in this case fair, but in a rotational speed, the latency is actually looking what we are.
+    We were actually looking for what sectors. But now we are seeking what.
+    Check. Okay. Now gimme, gimme, gimme.
+    But the best case scenario. Give me the sector number.
+    You are leading the. So do you want.
+    All the sector, you know, enormous tech. Do you need to see do you need to do you need to look for the right check?
+    Do you need a chair? Would have had to look for a large hat? No.
+    Why not? You're already here, right? For Seagate is one.
+    Latency is well, zero. Worst case scenario.
+    All the secretary in which WeChat. Out of emotion.
+    You need to move to sector.
+    Sorry to check. Going from here to there.
+    And the two there. You agree? All right. Now.
+    Now, think about a situation at the desk that is in a metal check.
+    Best case scenario. Quickly. Zero.
+    Worst case. Worst case instead of two, it's going to be one one.
+    You see the difference now, depending on the location of the head situation, different people agree.
+    You turn out, which is one third of the maximal.
+    You can meet at the end, but the one third so that I just give it into intuition.
+    So when will maximum sea time occur?
+    Last question before we finish this week.
+    Could you give me the scenario that that scenario which will incur maximum every time you move the task ahead of one where where.
+    Well innermost to our outermost, all of which most people agree.
+    Yeah it's uncomfortable you that's maximum a. And you don't know the situation is execution.
+    What below average. One third. So maximum.
+    Okay. So let me fast forward 2 to 2 over here.
+    I don't see that average already. Yeah.
+    If it's going to be a maximum speed home, a particular device, a millisecond will be average.
+    Bobby The average family is six divided by one by three.
+    And I think they're so. Good.
+    Questions. Sure, our questions. So to recap, there are two types of latency.
+    What are two types of latency that start with a.
+    C. C. C. C is looking at for what?
+    Check. Then followed by. Followed by one location or latency, which is looking for what sectors?
+    That's exactly the way that I need you to know that. In addition to that, there's also something called bandwidth play.
+    Remember, I give you two terms one span which the airlines, one latency already tell you that everything about latency.
+    Right. And bandwidth that could be, I don't know, one 200 megabytes per second.
+    Okay. Now putting everything together, that's how we're ready for this example.
+    I think we're ready. Let's see. We can. We can. We can get this done. Okay.
+    We don't want to spend too much time on a supply system. So if someone give you a disk and every time this device is, what can you tell?
+    So I went one. Millisecond. Could you tell me the outage location those latency?
+    10,000. IBM means 3000.
+    Three millisecond. Yeah.
+    Chance for a chance for that band, which is a 50 meg meg megapixel megabyte by uppercase B, I mean by six and the block sizes for Keller by Y ten.
+    Sequential workload means there's ten megabyte.
+    I don't know, maybe first guess now we try to do ten megabyte data and because someone tell me to how many blocks,
+    how many blocks are there in ten megabyte. How many black?
+    Terry Maguire divided by one divided by one four kilobyte roughly.
+    What number is that? I think I have some the mass somewhere. Oh, I know.
+    I don't know what happened here. So ten megabyte, a divided by four kilobyte is 2.5 times what, 1024 people agree.
+    People see that? Why?
+    1024. Yeah.
+    Yeah. Because that's how many kilobyte you have in one.
+    So he's a ten 2.5 time. 1024 Apr 21.
+    2100 by. Question.
+    Question. By more than that.
+    By more than. So we had readings sequentially.
+    Sequential means one, the 2500 block, the Miami locator located.
+    You want check. Can I see? One, two, three, four.
+    It's so cozy there, right next to each other. Can I. Yeah. So.
+    Well, right next to each other means I only need potentially one.
+    Plus the computer to the first blog.
+    I have 25, 2500 block. So somehow, let's say to first broke here on this first block there.
+    Then I just continue. I hope that that's that same block on people.
+    But basically one next to each other people people with me and until I how how many block to it should I read how many BLOCK 25 100.
+    They are wide just adjacent to each other. They are neighbors, close neighbors by next door neighbors.
+    So which means I need to do what one seek and potentially one location or latency.
+    Then I start trying to meet people. People agree that tends to meet.
+    How long does it take for transmission to complete? Is determined by.
+    They are determined by what families I think we have.
+    We have a complete mess now. Right. Okay. So completion time for this particular work law will be said.
+    What is our. Average sticker price three.
+    What is three? What will be three? OC price 1002 OC What is the what does it mean?
+    I should say ten what per megabyte divided by 150 megabyte right per second by a person.
+    Can I add more to the numerator? Is times thousand times thousand?
+    What? Second millisecond. Many people see them as they all emit a second now.
+    Okay. So ten divided by 50 is what point to easy.
+    The point to so that transmission control and community transmission time.
+    201 201 milliseconds will be the latency.
+    What is latency? Two together a total latency so unpopular.
+    Three data, which is power.
+    10 milliseconds. Right. So I guess my question here is what is to ensure will grow?
+    Which one dominates transmission or latency?
+    Transmission. You spend more time on transmitting data compared to what?
+    The latency. Which is good or bad.
+    Yeah, it's good. Now you can also computer actual boundaries.
+    This you can call it. It's a maximum bandwidth. Actual bandwidth is ticketed mounted data transmitting and divided by one.
+    The conclusion that this Nanda cannot turn out to be smaller or larger than maximal or smaller Y because of Y.
+    Because of latency, limited latency for on the phone the equation you're going to have exactly what.
+    If I remove latency, that 210 will become what they know limo latency, 200 the bandwidth.
+    It will be 150 megabyte per second.
+    Now, because of latency, the number cannot be smaller or same than the maximum, maximum smaller or because of latency.
+    People agree. Yeah. But in in a sequential workflow again, which one dominate?
+    You spend more time on church meeting or, you know, waiting for church meeting data?
+    Yeah, right. Okay. So I think that's that's.
+    What about random workflow? Uh, we're doing good right now.
+    Workflow is like 2100 once a year. The islands there, we were everywhere.
+    You can take a longer or shorter. Longer time to take a longer because way longer.
+    Why longer? Why? Why would it take more time?
+    It'd be a bonus or you're going to have a more.
+    Right? Yeah. In other case, once you get into one location or then you're transmitting data right now where we block, there might be potential.
+    See kind of what? Like the first of here I need to see.
+    And the potential role rotating rotation or latency down, move on to a different chair.
+    They see that there's another seat and rotation or latency.
+    People. People see that. Yeah. Okay. So with that said for a is random workflow I think that's the exact number Z 2560 2560.
+    Is that a number. A number block. Right. 2560.
+    So 25, 60 times seven plus three, we know.
+    What is that y price four divided by 50.
+    What number is that? Four divided by 15? Someone having the number, What numbers there?
+    45 years. What is the transmission time for transmitting?
+    How much data? Wah, wah, wah, wah, wah.
+    Yeah, four is for kilobyte. I guess a four killer.
+    So this is a four. What do I have in the summer? Okay, so this four kilobyte divided by 50 megabyte times thousand.
+    What is that? Yeah. So I guess I cancel out, right?
+    So the South amendments thousand and a lot, roughly. I mean, this roughly is megabyte so it cancel out.
+    Right. People see that. So it's okay.
+    So the numbers point okay in random workflow.
+    Let's look at this. To summarize here in London workflow, which one dominates?
+    Latency or transmission? What is latency here?
+    Whatever we brought will be low latency.
+    Papua Millisecond So you spend ten millisecond charge to transmit data for how long pausing or what millisecond?
+    So which one do you spend more time on? One. A latency.
+    Okay people getting is Yeah. Excel bandwidth is very slow is very low as you see.
+    I'm done. Unless you have questions. Yeah. So the boxes of ten megabytes were just the, um.
+    Before Joe Biden's come from the Bronx.
+    Yeah, that's exactly right. So I guess the question is, in this case, where where is where the weather is for Caleb?
+    I can't fall in Orlando. It's the size because we are meeting one frog at a time and assuming that each province is one sector.
+    What about you? Thank.
+    Any other questions? We are done with the strike again.
+    A key concept here is block by block reading and writing, banging blocks and and a device like a sequential workflow, right.
+    Instead of random walk along. And the concept of a latency.
+    And the bandwidth we consider to. Fenway says, how you can transmit data and latencies, how long you wait.
+    We're waiting in. The doctor's waiting. Good.
+    Let's move on to talk about as a city or maybe the deficit.
+    Let's talk ammonia. What is SSD? Solid state drive SSD.
+    Now, zooming to the SSD, then you're going to see a number of memory chips.
+    There's a note on memory chip. It has some kind of controller, logic controller, device controller, brain of device.
+    Maybe here and inside this chip might have some kind of main memory.
+    When I say RAM, how many people know what I'm talking about? Ram I am Ram, I Yeah, my memory, basically.
+    Yeah. But essentially, essentially, this brain, all you could think of as just some kind of CPU here and the CPU and the data and then
+    suddenly said I'm on my main memory storage area but those sorry area ram wallet all.
+    Gonna disappear, data is going to disappear. But keep in mind that some some some, some.
+    Some may memory here. Some Ram. Ram.
+    Okay, so those are the memory chips.
+    This way. So this is what's going on. SSD cans contains a number of a fresh memory chip.
+    Our chip has a number of dyes, and this is one particular dye.
+    Can I make one? Proctor each Dye it.
+    I have the number divided into a number praying. Could you tell me how many per hint that I have to pray?
+    Each praying has how many blocks? Each praying to pray has How many?
+    BLOCK Three in a row. Right. How many words do I have?
+    Six rule altogether. How many blocks? 18 block people are with me.
+    Each bro has how many pages? Green pages, y how many pages?
+    Ten pages is a ten pages. They are ten.
+    How many pages? How many? How many? Including proxy aotea.
+    Look, look. It looked like a hand to me. How many? How many? Because it is a terrier.
+    Too many calories. Calorie. So here's what the diagram is not important.
+    I got a run for the web somewhere. I on the phone or internet somewhere way.
+    But I think that's this the the the important is to understand the different the concept of blog and the pages.
+    Okay.
+    The pages SSD like it blogging how this is why you can think of every green page green page green green path is full killer by quarter pages here,
+    but a concept block. So when we're reading and writing, you are reading what?
+    Pages. Can I. Can I. Can I. Can I have that?
+    But when you are. It doesn't have Irwin per say.
+    But instead of something called erase, when you try to erase, you're not erasing the individual pages.
+    You are invading the entire What? Blog.
+    I think that's the key message I want you to have for some reason.
+    Let's understand it a bit more. And that's all we need somehow to erase erasing the entire blog.
+    The blog has how many pages in this diagram? Temperatures.
+    For some reason, you need to erase the entire life.
+    It doesn't want you to always individual page. Okay.
+    All right. So to understand why that's the case, a little bit on the inside and why into the storage.
+    This. This is your SSD. And those are individual cell.
+    And we say, oh, that's they stole one bit. So.
+    Okay. So the one means either zero or what?
+    Wow. Okay. Uh, zooming to cell.
+    So can I. Zooming. Zooming to individual cell. You are looking at something like this.
+    Something called every cell is is made of four for holding a transistor place for the transistor.
+    And how many how many people seem much happier for.
+    Yeah. Some of you. Yeah. So the difference between a normal transistor and a floating transistor.
+    Can you tell me the difference for those of you all in, you know, the protein folding cases is to had one additional one.
+    Additional. Gate is called.
+    What? Floating. Running.
+    Can I tell you? The floating gaze stores? What does a store.
+    Anyone want to guess? All your data.
+    But the data is not data in waffle. Waffle. Stores in Lake Charles.
+    Why they say electronic device, electronic. When you get back your SSD, bring SSD.
+    No electrons in the floating gate for this.
+    All the sales can. I know electron electron has positive a negative charge negative.
+    So if no electron can we say it is a state represents data one I just just just name just just representation here.
+    When you get back to SSD brand no electron in a floating gate that particular sale, all sales represent all sales are in the state.
+    All what I want.
+    Okay then. Someone writing data.
+    Writing data. Well, how does how does the how would writing whole writing occur?
+    What does writing data mean for this particular device?
+    You you the charge. You want a positive and negative charge applied to control gate.
+    Okay, here's what's going on. The electrons are here, right?
+    This is flowing here for that. For all you here. Okay.
+    And. So. So basically going from 1 to 0 means we need it.
+    We need to attack some electrical and store and putting what gate.
+    Blockade road. Engage people with me.
+    Okay. In order for that to happen. You would like to apply a positive or negative charge to conjugate.
+    Positive y positive so that you can attract a negative electron.
+    So because for loading a is surrounded by oxide like some kind of isolation, the why would you need to have some kind of insulation?
+    Why would you make it the same? So why would you want to have oxide layer insulation?
+    Why otherwise the electron trap that might free might feel free to go.
+    So people see what's going on. So some kind of oxide layer, insulation layer, but the insulation layer is not entirely breakable.
+    Okay. So when you apply too high enough positive charge to which gate what you will say,
+    which control gate, the highest very high that hang wall people, not people.
+    How many people know the circuit that this circuitry.
+    Typically if you that that right that I see working what what it.
+    Three all fly away. But. But the what is here we're talking about is very, very high.
+    10 to 15. Okay. Why? Because the oxide layer is difficult.
+    You know, electron to break through, you need a very high. That makes sense.
+    So through the process called quantum content tunneling, I can show you this, like.
+    Yeah. So here's what I'm saying. What?
+    What I have, what I. What I. What I've been saying so far is the writing process is going on to stay particular to say are going for a
+    state or one to state or what zero state of one means election or not in a voting no state of zero means yes.
+    So for that to happen, posting very high positive wattage.
+    Okay. Pseudo right so that you can check electron from that channel.
+    There's a channel to floating through a process called Quantum one Tunneling.
+    Okay, I think that's the picture I want you to have. Reading and writing.
+    You are reading the entire page again. You're not reading with your cell.
+    Or reading? Reading. I haven't thought of it, but basically I started reading by the writing.
+    Writing here because of high wattage light. You don't want to apply to individual cell either.
+    Okay. People still want to see ancient because high.
+    What? Okay. How many people want to get close to the electricity transmission wire?
+    That's basically the 10,000 worried. How many people want to get close?
+    No. Why not? Getting close is.
+    Dangers are the same thing here. So when you apply the worry high to individual cell, if somehow effect, it's going to affect that neighborhood.
+    People's privacy. When? What are you going to do? The entire page and happy.
+    So writing is writing individual page. What happened to the.
+    Now they think about it almost, actually.
+    I just want to know. Let's say this gate.
+    I even have example here. Right. So.
+    Doesn't matter. Let me just say the point here. You can order that.
+    Therefore, that doesn't matter. Can I.
+    Can I. Can I. Can I. Can I now say that this this this cell still has the electron electrons means 100.
+    Could it be possible someone would change back to one?
+    Could it be possible? Could it be possible? You're going to change the data, updated it away.
+    So going from 0211, shoot, what will happen?
+    You list. Hi. What? What? What? What do you want to do? Going.
+    Going back. Going, going wrong. 0 to 1 means you're going to do what will happen to the electron.
+    You need to We need to make the car with all electronic. So getting the electronic one unfolding gave me this time conjugate.
+    You need to have a positive. A negative. Negative.
+    Yeah. Negative. You worry that they turn out to be evil, evil, evil.
+    Higher negative positive mean positive.
+    There's ten I negative probably 20. I don't know. Okay. Because because of that you don't want to even.
+    You don't want to you don't you don't want to update individual cell.
+    Instead, basically a device is going to wipe out erase the entire one block.
+    Okay, So he never actually just changed.
+    Josh I guess what I'm saying is it's not that the wise has not changed, not getting rid of zero all the all this.
+    So we're going while 0 to 1 by means election need to be gone.
+    Okay. And which means a very, very high negative advantage applied to conjugate.
+    Because of the danger of the high wattage.
+    You actually do that to the order to do all the sailing in the entire block?
+    So that process I call what else?
+    Okay. So let me give you more detail all the time.
+    So now they say there were four sales that you guys only have for sales.
+    When you get where you go, you go. Your brand SSD and we sell is instead of one one, meaning electronic.
+    No that now some are writing data in that process called program programing through my writing.
+    The data is 1001. Can I means anything to change the first L.
+    No seconds. They all need to go from 1 to 0.
+    What? What about Thursday? Are also going one one, two, one zero.
+    Any chance to laugh? No. So the program means program, but always mean going from one for some say Going from one to what?
+    That's why this is a call waiting. Writing is for no electron to electron.
+    Okay. And the writing is done by. By page. High positive wattage.
+    Then someone try to override. Okay. Someone saw. Someone did this now.
+    Someone tried to change the data instead of 1001.
+    What I'm trying to say here, I guess.
+    The. Okay, here's what I'm trying to say.
+    Yeah. That I think that you can all ignore. When I hear someone try to modify data 1001 becoming 10111 can I could it be possible to.
+    Right. Okay. That means for this peace deal going 1120.
+    Am I right? Second base going one now going one way.
+    Zero two. What does it. What does it mean? Election two.
+    No election. Positive. Negative. We are positive, but we want to stay positive.
+    But but what? What, what prior to the conjugate, why are you high negative?
+    So for that to happen, he actually loses.
+    Okay, so what I'm trying to say is if someone tried to lie, I try to override.
+    So I think probably I need to post something like this now.
+    So I try to do.
+    I try to. It is time. Tied to this.
+    The new. And they say new data. New new data. New data like that?
+    No, actually, it doesn't do. Right.
+    You look at the new data, no change here. And but this first sale going from 1 to 0, people didn't find a second.
+    It going back to what one? That means you need to.
+    Eloise. But people agree for the first they are still problem, right?
+    People with me. And a second or third actually is what they need to always get a lot.
+    But issue, it's not dying in darkness. Not dying.
+    Eat not down to individual cell, not you and pay it down on the entire block.
+    So basically new data is like that. You actually erase it.
+    Do erase new erase.
+    After erase, you're getting back. What? So erase.
+    Tell me the data. New data, is that right?
+    So let me put here a new data there. You actually do it, Eloise.
+    Eloise 10012. What?
+    One, one, one, one. That's Eloise. People remember.
+    So they erase the entire block and they say this has brought the anger down, programed, programed to.
+    100111. And this is a Caldwell program.
+    Okay. I think this is what's going on.
+    Yeah. So. So I did like the second rowers.
+    1001. Yeah. 2100021 becomes zero.
+    And they said program for women's riding.
+    Riding means what they going 1120y going for no electron to some electron where no electron being black for progress.
+    Right right something. But then.
+    Oh, so this is why if you have now the new data 0111011 for the first still program.
+    But for the second, the third cell means our line because already a data are always not done on individual cell page on the entire block.
+    So you actually do the Elis wiping all of everything in all this was they'll change
+    changing back at two to all two for once or once break but then then program.
+    Well, I think there's some peculiarity and I have just one more example to say and with which we bring a hope, hopefully bring everything together.
+    And this is an example we are going to look at together.
+    Puppy after break. Right. Why don't we take a ten minute break, come back at the six, 630 to make it 635 at 635.
+    This is one. So.
+    Yeah. Can I. Can I have your attention? So in this case, in this diagram, we.
+    We're assuming that there's only one bra. Okay. There's a so there's a that the awning bar was the one and the only.
+    The only one. Only one from this project has how many pages?
+    Casey, how many protesters did they have? How many pitches in this block.
+    Sexier. How many pages are free? To the last two three mins that don't have any data I.
+    Okay. All right, Amanda, four pages.
+    Okay. Now there were two blue and two where someone at this point, someone tries to try.
+    Someone is trying to modify the first.
+    Read this one. Was she the desk controller?
+    Do. Watch.
+    What should the device do? Okay.
+    This is a this modify the first read why this modifier means writing or overlay.
+    Although I remember all I need to be down on the entire what prong?
+    Okay. Now one more thing to say whenever you erase programing anyways, there's one cycle P means program.
+    E means what? Erase that p cycle.
+    Every device can only sustain a certain number of the cycle.
+    Set a number of cycle Y.
+    So, for example, this particular device can only survive ten 100,000 cycles, which means you don't want to do that often, right?
+    You don't want to finish a complete cycle too quickly.
+    I mean, you don't want to take a lie out of the individual cell unless it's absolutely necessary, which means Kadima,
+    which means the controller in this scenario does control have other options other than erasing the entire block.
+    Erasing a least needed ban on the entire Broadway.
+    Any other options? Any adoption.
+    Certainly that that is not going to override any where your people agree.
+    I agree. What we say is no go. So this is Dale Page.
+    It just controlled. Remember that which page is in which state?
+    It doesn't mean that the tests that the device is overriding the data.
+    No, just it just remember the first page now is outdated.
+    The new page actually go to one of the free pages.
+    Give us, see what's going on. Why not free?
+    Pages. Okay. At this point, what operation has been performing?
+    Reading. Writing or writing?
+    Writing? How many pages? Just one page.
+    Okay, so the new this this actually to change.
+    Changing means a new content for the old page.
+    First page. The new content now is putting and put it here.
+    Put it here. Right. You see what I'm finding to put it there.
+    In the meantime, in addition to that disc controller, Right.
+    The device controller, I should say device controller. Keep it some kind of a data structure right there.
+    Data structure. Basically saying that first page now is outdated, doesn't contain valid data.
+    Okay. Yeah. It also also the think of this.
+    That's basically what's going on. Okay. Now I, I want to find so far questions hands of you have questions.
+    Now at this point, to summarize, trying to new writing, right?
+    It's trying to write new files going, wow, this file this guy has, how many pages, how many pages to just make you are with me, right?
+    This is assuming there's a new file, two pages. What should the guys do?
+    That's the device has enough three pages. No stars have enough space.
+    Well, unless you do the Wire and unless you make this deal page space, occupy a better stale page available.
+    Agree that you're going to have one free and the other one here you have a nice space where people agree.
+    Okay. If you agreed to that, that means at this point that device needed to do.
+    Do what? Eloise Right.
+    People, people see that. Because this time you're going to you're going to clean up the stale page damage
+    overlay and write in a memo all while modifying data is not done on individual pages,
+    individual page, but on what entire what in blog people see that you don't want to write individual page.
+    So before before erasing the entire block, you can read pages like this.
+    Like when I say read all pages, but a controller might be smart enough.
+    Just read the four pages here. No need to read stale page.
+    There's nothing in a free page. Okay. That will also be possible assuming that we need a lead.
+    Okay. Can I. Can I. Can I put a note here? We all.
+    Well, a page. Okay, I can put a note here.
+    Lee Orwell. A page. That their pages should be or where the page.
+    Okay. And you want to put the point at their right shape.
+    And I think I put a pointed. It really over the page.
+    If you all see that there in this case, how many pages need to be read to the staging area?
+    And remember the controller, that device has certain staging area.
+    Work. AIUI has RAM has CPU and can allow you to do some work inside a device.
+    Okay. So assuming there's only write only where a pages are read to the staging area, how many pages will be left for Peggy?
+    I won't see that before. For now, inside this staging area.
+    Actually, you can do an hour one. This is not how to SSD.
+    I mean not. This is main Ram. Ram well made memory.
+    So it basically does blog is here.
+    And six pages you actually rearrange my true blue showing up first to read and put the to going there.
+    Okay now what? Then Eloise, why?
+    Basically data backup effect, picking up data in the here and putting new data out there, cleaning up the old data clinically in other space.
+    That old data or outdated data. Erase, erased erasing is done on the entire block.
+    People see that, right? Eloise in her book. Now, what lost Eva is what?
+    Writing. Writing? How many pages? Cespedes.
+    Okay. Let me know any questions.
+    You. Again, this example is allows you to see to putting everything together, right?
+    Yeah. Of this the question is how, how, how, how do we decide how to us.
+    I would say to that how do we decide the pages?
+    Okay. So the question is, how do we decided the pages are stale or not?
+    So so I think the controller controller.
+    So this controller, remember where I, what I, what I, what I point you to this controller, assuming this the controller logic.
+    The controller controller has a certain amount of memory to remember.
+    Right. Remember which page A still gave it to me.
+    Ask you. So how many people know something? Copy map anyone?
+    How many people know P map api TB map. Some of you.
+    Yeah. So? So. So I guess some kind of data.
+    Your answer is some kind of data structure like a pin map maintained, maintained by the controller.
+    And that B map is basically is, is telling you that, oh, the first page contains still data.
+    Second page all the way to this page has where the data and last page is what is free.
+    Yeah. So essentially you do some kind of data structure that that keeps track of the state, the state or individual pages.
+    A page could be still could be free cause or what can also contain what?
+    Well, a data I guess a critical state. So I would page it could be do it all and controller has that has said that information.
+    Yeah right yeah. Any other questions.
+    Putting everything together, daring someone, then we can come out.
+    But there's the latency by latency.
+    So assuming that assuming that rhe latency is 20 y.
+    What did you ask us? What? What it means is millisecond, a microsecond microsecond.
+    So real latency is to fly right in and say is 250, which won't take a longer.
+    Really? Right. Why take a ten times longer, Right.
+    Yeah. I did not tell you to repossess, but your intuition is telling you which one.
+    Take a longer reading or writing. Writing?
+    Yeah, reading, actually, just sensors, a sound sense or whatnot.
+    And I'm not going to go into detail, but the writing, writing wall lecture move movement of electrons take longer, erase it, take it you want longer.
+    Write Elway's brain the device to tear the scale of the heart excuse to why?
+    Why Elway's take a one point y millisecond going from Michael to millisecond.
+    You see that?
+    So adding together so that that so this particular workflow workflow modifying a webpage and adding two new new green pages this workflow.
+    Incur how much latency? Okay, if that was the question that you need, we need to figure out how many pages are red,
+    how many iterations, how many Bronchi airways, and how many pages are later.
+    Okay, can I ask you to call that question? So how many how many pages are later?
+    And in any like here and in any, any right here, any any pages later here for this let.
+    As why I hear people see the OC.
+    What a true green OC. So I think that there were two things going on.
+    First is riding of Rad Ry, I should say, modifying or modifying the RAD Turning to what?
+    Riding or what? A new page.
+    One. Why do people with me to green coming right to green lead to one?
+    Eloise, People agree. How many less?
+    Wang Anyways, how many less? Assuming the audience were to pay that they better write it down.
+    So write down something here so I can put it here.
+    Now. I guess the. What I can say is not that.
+    Okay. Okay. This one.
+    Right. So essentially is. Modify y modify a rat.
+    One. Wah! People agree.
+    While right away we noticed writing, adding two new greeting.
+    What do we do? It's going to lead to y y El Camino at for blood reading only where they really pay to lay people with me.
+    I clarify this where reading anywhere two pages for less.
+    Photo by Wang Eloise.
+    Followed by how many pages are.
+    Six. What? Six.
+    Why? Six wives. So altogether seven wives.
+    So so I think that's the. Which means in sum for these price seven lives plus how many ways.
+    Wireless and you can plug in the latency to give you the total latency.
+    Right. I think that's a. We don't.
+    We don't. We don't. We don't. We don't. We don't we don't consider the ban.
+    We say this case. I think a lot of families think about how much latency, the entire workflow this workflow has to to operations.
+    I was good with that example. Feel free to ask questions.
+    Right. But Don West, Assistant Sierra.
+    Key concept is blog and we realize blogging hotfix to support killer by and here is much larger content
+    bros becoming pages in SSD reading writing you are leading to entire page writing entire page,
+    but the SSD has always it doesn't have over.
+    Why? Why is that? Eli's erasing is Lilly leads an entire block.
+    The browser has a lot of pages sexy. As I said, he doesn't like our way.
+    Okay. So SSD. Right that doesn't like where I am, and she might be able to give you additional information.
+    Star system. Fine. Oh, doing something that's funny.
+    So remember the introduction slides. I somewhere have exemple all consensual.
+    Yeah, consensual. Not quiet, but to have.
+    I think. I think I get something here. How many people use Cassandra before Cassandra?
+    How many people heard about Cassandra? What is Cassandra?
+    Is sequel and no sequel database. No sequel. Yeah, I guess there's still some flexible, more flexible data model day and table things in my sequel, I.
+    So in consensual, if you are writing the data, the process goes like this.
+    Someone tried to write the data for us, right? Right.
+    First, add a log to request.
+    Write a log. Add a log to the log database.
+    The log file a add an entry to a log file.
+    How many people? No log at all. Log Like a web server.
+    Right. Anything. Anything. Anything special you can say about the law.
+    In terms of leading lights, in terms of lighting and our lady.
+    I guess I can I can. I can change my question.
+    If you happen to know Locke, why now?
+    Typically will people ever change the engine and log?
+    No, the log are for keeping historical data you added just adding entry.
+    So which means a log file a append on.
+    Can I say that? What does it mean? Adding to their.
+    And you keep adding things like a penalty. You're now going to go back to the globe, go to your law and look at the yesterdays and entry and modify.
+    Right. Because that's a hit. Are you going to change history?
+    Probably not. I mean, things happen to happen. I mean, you so long as a penalty, you never will overdo it.
+    People agree SSD is good or bad for that.
+    This kind of file is a good a bad SSD does as it does SSD like our life?
+    No. So as it's you can store commit flogging, SSD and the wives will be very happy to see that.
+    Yeah. Just keep adding energy.
+    Okay, then this is step number one.
+    Step number two, you actually lied to the main family. There's something called ma'am table memory.
+    Table. Okay. And at a certain point, the memory table grows in size big enough.
+    You can actually flash crash to the storage far too fast to SSD, for example.
+    Fast, mean. Light it back. Right. Write it back. But here's what's going on.
+    Disappointing information. But I do want to give you some some kind of context, a little bit context on this.
+    I'm going to say that later at the. Here's what I'm saying.
+    The flash is not overriding consensual network or lighted 16 table.
+    So this assuming this of the percent table by and someone change the.
+    Jong age from 25 to 26.
+    Remember what we did? Remember the firebase people? Remember what we did to Firebase.
+    So I'm a user. We changed the age away 125 to 28.
+    Assuming we're doing the same here to user.
+    That's a user y user. User 100 A change.
+    Change to 25 to 26. Okay. You're going to say 226.
+    So what's going on here? Is that change worse than what you.
+    You remember that in the lock by adding a new entry right to the last people with me.
+    Then you modify the user's table, whereas the version of a user table in my memory.
+    It just changed it 25 to 26. But you might have a version of a user table eating SSD that still has, what, 25%?
+    It doesn't go to the storage to change that. It's just changing in the main memory.
+    Once my memory has changed, I think it's little. Why has it acknowledged the user?
+    Why complete? Okay. Now, what happened is but remember at this point that 26 has not been returned to the star.
+    What happened to missing crash? What exchange will be able to recover from the failure?
+    Well, that would be what I will do with a database able to recover the 26 whatever
+    able people remember the difference between the main memory and its storage.
+    If you crash, what happened to the data in my memory or what would still be there?
+    No, it's gonna be great. Yeah. So how would you recover for all storage for our law so it doesn't actually lie to the storage is right.
+    So because, look, it's apparent only and because it doesn't apply to the storage, the lie can be.
+    The lie can be Acknowledge very fast. People agree, acknowledge you.
+    And because NGO probably has a very good life upon us and is good for application that need a need to do a lot.
+    Right. Right. Right. Right. Right.
+    Okay. So the one thing that's interesting to say is so may mean maintain or grow in size.
+    You light it back. And remember what I said. The SSD is my my have a number of version of the user table already,
+    but it doesn't or doesn't change let's say how to with you wasn't one and use a table for again write it back has version two the
+    version 2000 our the data in version one instead emerge this to version two version three something like that to the new was.
+    Yeah and fortunately the file is a pen.
+    Only people know the merchant.
+    How many people look at emojis on how people how very well what assignment you saw, how many know how many people know what I'm talking about.
+    But it emerges all is sorted by key.
+    You think about a key where to pair got. Every person has a key and you have a two words.
+    You will use a table and we use as key sorted by key and merge so sorted by key emerged together going to the third place.
+    He never actually all-White wasn't one, wasn't two and it wasn't three.
+    Is a pen only see that much? And I keep writing and she there.
+    And it wasn't one wasn't to just erase. Okay.
+    Again, as as these. Happy. Happy. Why or why.
+    Right. Okay. So I guess my point here is to when you design a new database system,
+    you want to pay attention to the behavior or behavior and collect like a listing of your storage device.
+    I try to utilize that. And so that ought to have a good performance.
+    Right. That was my point. All right.
+    With that, I think I'm done with the storage system discussion on Cassandra just for just a few.
+    All right. To any question here.
+    I do need you to know this example. Right. We are, we now are ready to move on.
+    If you no question, move on to the next layer on top of stories based on what we'll do.
+    You have what do we have for our system? Yeah, I think this you're probably more familiar with file system people, right?
+    So for our system, I could bring up the slide.
+    Filesystem processing is relatively easy to talk about because now we can we can point to EC2 the fastest.
+    And right there we can look at a file system there. Hey.
+    Now filesystem. I get to go to the U.S., too, right away.
+    Okay. So log into C2 if you want to follow along.
+    Just bunch examples after example.
+    So, so far, so far, this don't look like so focused on a file and lucky if you're lucky, file of a hierarchies.
+    Okay, then we filesystem then typically has a load allergy blue and then you see to go to loot allergy cd cd.
+    What should I say? I got stuck here. I think I.
+    I need to start over. Right.
+    Oracle go to loot allergy flax seed seed was slash and dilute allergy has number saboteur allergy people see home I city home and a home at what?
+    Ubuntu City Ubuntu. And this is.
+    This is my home galaxy. My user id call ubuntu.
+    Okay. If my sister has a directory.
+    You know, that was nothing. Nothing much to see. I can.
+    I don't mean to step command. I was showing you.
+    I So let's try to understand. I think the key. Okay. The key take away in a discussion of filesystem is metadata and the data.
+    Okay, Metadata data, again, stress, which No maintain metadata.
+    Nay, no. Which No. Stores. Data.
+    Data could be multiple data. No. Yes.
+    Or although we have only one right when we set it up. Yeah, there could be multiple data, but typically only one they know.
+    Although in in recent version, who do you could have multiple data?
+    No running actually running at the same time, but one that between you have three nine nodes running at the same time of what but that they they
+    altogether the elected one as the main one may want to use a the client talked to the the main one.
+    Ed. All right. So getting back to the again, a key the key key here is understanding metadata and the data that we know the data,
+    but understand metadata and which you aren't really going to help us understand what's what's in there.
+    They know. I think that's a goal and a concept.
+    But Blore will come back again. Okay. All right.
+    So with that said, that's now look at the stair command more carefully, step, command, display data, all metadata about the file metadata.
+    We already see the file name the metadata. What is the 46.
+    Size in terms of what what is what buys by way of size and decide how many block allocated a what is block size for kilobyte?
+    There's a regular file instead of ten. What do I have to look through here?
+    And this time why you see that different time, they said.
+    Also metadata is it's a file that actually let's not talk about the legacy too much but do anyway.
+    So device ID, I know something.
+    I know. I know that.
+    So can I say can I say can I say this automated metadata we're looking at here is a store.
+    I know I means index index.html and we file a file system.
+    System has. I know. Okay.
+    So I should say of the file system.
+    That right? So then maybe just keep it like that.
+    It's more detail, if I want to say more, but that we file has metadata.
+    People agree metadata still, I no index, no basically file system has certainly area vouchers to manage the storage,
+    storage, devise and allocate a certain area so that for air we file it has space to store a metadata there.
+    Space is called I know index.html and the index.
+    We will see why it's called index and we I know has number almost like index.
+    You think about the I, I know is array data array.
+    Don't you have an index to a railway index. Start stop one way zero zero.
+    Be the number. I know number. And you can think about this.
+    This is. index.HTML. Okay.
+    I write this. I know numbers indexed ignored a links.
+    Now today let's look at access. What does access mean? So seven, seven, seven.
+    Why? What does it mean? The permission?
+    Yeah, permission. Now, now, in this list today, we need a floor.
+    We need us sit down and fully understand the people in mercy as more common.
+    We ask you to together see what I said.
+    Do change a flower mo base.
+    Which means permission. Is it permission? Remember more to 400.
+    My sunflower name. Say hello. That's what I shouldn't say.
+    400 400. What? That's a400 Me.
+    Readable only to the owner. No other people can do anything to do well.
+    Yeah. So, uh. Okay, so let's understand this.
+    Hello to test. I do not ask.
+    You see tomorrow. So let's understand the entire.
+    But so whenever you see the D in a first position, it's telling you what?
+    How do you cross this final analogy? People see what I'm trying to say.
+    And we watch focus in an object way showing.
+    Shown here has a list of character at the beginning.
+    You see that if a first character is de means, the cross is what?
+    To tell you it was Dash for the employees.
+    Hello. Where's. Where's my. Hello? That's right. Here is the dash means file.
+    Okay. Okay. That was what I'm trying to say. Okay.
+    This is a file, is it? Hello? It's a file. A dialog. It's a file of dialog.
+    Okay. After that first dash, what I'm highlighting.
+    How many? How many characters? What I'm highlighting.
+    Like how many character morality here? Can you count, including at that specialty night?
+    Yeah. So night divided into three groups for a three character are the permission for whom you serve.
+    Well, you all know this file who own this file Ubuntu.
+    Ubuntu lets you use my cell. All right. Yeah. User you necessary is a permission for the users in a same group.
+    What is a google name? Ubuntu.
+    This is a user name. This is a google may have happened to be the same last.
+    The last three is what? What? Permission for whom. All of you.
+    All of you. All of you.
+    So with that said so. So that's the thing about this.
+    So our W dash, right?
+    Is the permission for the honor, right? Me Which means on Okinawa.
+    Lee Ly the last petition for what?
+    As Q as the files are not executable. Right. Okay.
+    So the permission is limited by something here.
+    W That means in binaries one, one, one and the one.
+    Zero. What should I say here?
+    So. For the honor.
+    There are three patrician, three character. First calico.
+    First calico. First letter. First letter is, as you say, first character.
+    First petition is either ah or what? Dash OC second position is either W or what?
+    Dash third position either x you don't get a c x.
+    You see the X somewhere? Third position is either X or Y or death.
+    People see that now. So.
+    And this is binary, Right? Right. So for the owner, it will be for the owner of this helo that has what would be the permission?
+    As one C to R means one. W means one.
+    That means one zero. But what?
+    That's a binary, right. What number is that in that in decimal.
+    Six. So far, so good, sir.
+    Hello? Hello? Where's. Hello? The test. Now you can tell me actually.
+    So the permission will be six six. Four.
+    Yeah, right. And I think I believe that should be the should be what?
+    This, this, this access.
+    Trying to see why that access very so successful means user can read say owner owner can be also owner can wa lie cannot ask you the same
+    permission for the users in say include or are out of users they can audit what we like it okay now you to stay there for the mod 400.
+    What does 100 mean?
+    You re only can I ask you that next C to see what's going on to the file exchange device changed to that and the permission is on to privacy.
+    That only one I Yeah.
+    So these files were already protected. Yeah.
+    What is the difference between compassion and Mexican? Oh, ask me, what does the question is?
+    What does the mean? Executable. Do I have programs somewhere?
+    Thank you. Yeah. So I think that's. Somehow all that are executable.
+    Right? You see it? Let's X then. Do I have a program?
+    Python program? I have a two hour program. No one but the x me as mutable.
+    Yes can. Good.
+    Right. So going back to the hello to test, we now understand the permission.
+    Can I change back? How do I change back? Usually.
+    What? Right.
+    It was. It was. It is the permission. Yeah, I think so.
+    Yeah. I change back. Well, I don't like to hear that too limited use it grew it and I think to say there were three times here.
+    Access time. What if you could try and change that? What you want for lead.
+    Those are three timestamps. Which which of the three times down.
+    If you want to guess why, it's for the last kind of wild card that.
+    Access to. Exercise.
+    Let's test. Let's try that. Okay. And then this.
+    There might be some peculiarity going on here. So I'm reading a file for sure.
+    Right. Reading the file. The excess triangle change.
+    People see the update. Yeah. Exact adenoma modifier right now.
+    That's a modified file. Let's see. Why modify at a space somewhere?
+    Change back, I think somehow modify. Do you see the modification time change in both?
+    Let's see the modification time change this change.
+    I think in both cases, the chance to or change in particular in a new light.
+    So change time. Can I tell you the last time the access time is read higher modify modify time is what?
+    Right. Yeah. And change. That is changing metadata.
+    Metadata change. Okay. So if I if are reading a writing and question why.
+    When I when I modify the file, not only modify it time to change the change that also change also update y.
+    I do not change the I change the size. No, I do not change.
+    Did I? No, I did not. I got it back high.
+    I basically add a space and remove it now. So no change to the size.
+    Any other. Take my question.
+    I did modify the file, although it will work with the app.
+    And while I can, I can make it even more interesting. How about how about chance to to let it I change the size?
+    No. Okay. Why both modified time and a change time update.
+    Because access and modify are also part of metadata.
+    Is that correct? Yeah, yeah, yeah. People see that.
+    So I think that's we know modified time need to be changed.
+    I did. I modified a file. It should be updated.
+    But because it modified time change, that means metadata change are not.
+    Check. So change township change, right? Yeah, Right.
+    Right. So accept, modify, write, change to modify all metadata.
+    So check that that. Yeah. Yeah. I guess the what?
+    Yeah. So can I have a question related to that?
+    Could you tell me a command that only change in metadata? That should be a good question to ask.
+    Do you already know Command? Yeah. Could you call it a command?
+    Whereas executing that command didn't change metadata search law.
+    Let's do that search for you.
+    I need to do it again. I. You see that access to more and modify time?
+    No change. But what time? Change. Change.
+    Tire. Okay, so I think so.
+    Yeah. So we're file size.
+    It was 4652. Are there the box this.
+    Yeah. That is good. Yeah. Like, like I said, the ju file system has been very generous of our system and probably is anticipating the growth.
+    Yeah. Or maybe two out. So when you, when the files file grow in size y, you might be expensive to keep allocating space.
+    Yeah. You can go to 32 with our file system and do Yeah.
+    Do lot of work. Yeah. Because every time allocate more space it's take a lot of effort for something.
+    Yeah. We're not going to bother that that's going to be the case.
+    All right. Uh, I think there's anything else I want to say.
+    A little maybe more to say about a file system. I want to show you the data that I know there.
+    I think that's about it. Now, I think up to the second break, come back.
+    We can talk about this. And I think last time that I give you the demo.
+    All right. I start with the demo. Demo. You actually have it.
+    We shouldn't have. We may be able to continue here. Why don't we take a last second break?
+    Ten minute. Seven. 39 minutes.
+    Okay, let's get started. My last part of today's meeting.
+    First, let's finish off on filesystem.
+    Just be more to say about. I know I giving you more to be more details than we're down with a file system.
+    Right. And we should have all the build up necessary for us.
+    Okay, so now we show you the slide. So.
+    So this. This this diagram I mentioned. Let me show you a bit better.
+    A better one. I think that I need to show you this one.
+    Okay. So if you look at this. Okay.
+    Okay. If you look at this particular storage device, you has how many bog burn numbers?
+    0 to 63. So altogether a 64 block file system.
+    Wow. Look at this storage device. Look at the device. Right. And it's decided to force a block.
+    Meaning that broke at the O2 where side one will be use for storing metadata.
+    Okay, the remaining block. How many blocks?
+    How many broke left altogether? 64. Yeah, well, we use useless for storing the data.
+    Okay, Now, keep in mind this picture change in a case of stress in a case outside this
+    entire machine might be dedicated for storing what metadata there your data.
+    Instead of 56 rock, you might be dispersed, maybe distributed among multiple data.
+    Those people. Sit, sit, sit, sit, sit.
+    A jump. Right. See the difference?
+    But in this single file system, automated data on data reside in the same device, a storage device.
+    Okay so first April zooming to the first possible monophosphate Brock the last five
+    Brock are used to store what people see to see that I will store what I know yeah.
+    For the zoom in to this. I know. So this is a five blog.
+    I blogged zero two, I blogged for four, and we brought people remember the blog size.
+    Paul Keller by now, this poor killer by here is divided into how many pieces?
+    16 pieces? Yeah. Could you tell me the size of each piece?
+    So for a killer party. But if I were 16, what do you have?
+    Popular by developed by 16 the desert, as do the math here.
+    So who divided by 16? What do you have?
+    Right. Let's do the in binary hi for kilobyte 2 to 2.
+    Which power? One kilobyte is 2 to 1.
+    Remember first week, one kilobyte to total which power.
+    Pare. What about for Clever? Talia Can I say.
+    Keller, tell the rabbi to travel.
+    Four. What do you have? To eight, which is.
+    256. Yeah. 2:56 a.m.
+    So now, can i tell you how we broke every box here?
+    Oui, oui, oui, oui. So a bronx, a poor killer by bravo is divided, divided into 16 pieces.
+    Every piece, as I know. So your metadata cannot exceed how many buys?
+    256 buys. But basically, that's what's going on.
+    Get by. Okay.
+    So I think this this. Remember what I said.
+    Being a file assistant. So file assistant has.
+    I know what we file or directory.
+    They say we file in a file system. So which means this file system can have how many files at the most?
+    How many? 80. Y 80. Because I got 80 boxes.
+    Yeah, because there were five blocks and we brought store.
+    How many? I know. 16. I know. Yeah. This file system limit has limit counting store 80.
+    Right, right, 80. And the last thing to say is I number I number basically the index,
+    you can see the first two rows on I number the first box here, our number is one zero.
+    The last one. I know what I know numbers 179.
+    Now people have a complete picture.
+    Ignore the first three first firstly first reports that also that this to blog this is some kind of bitmap and this is called super Brock super.
+    I'll probably store the the I number for the loop direction so the file system can boost bootstrap but ignore that.
+    But I think that's due to the importance. The important take away is consider how filesystem organize metadata process in the store.
+    Metadata being a data data structure call what? I know.
+    Okay? I know. And if I was just in case there's an area for storing metadata.
+    I know what I mean. Syntax.
+    Why? And this is a ray of 80 floors.
+    And I number just index into the index into into this particular law.
+    Okay. People getting the picture. That's all I need you to know.
+    In a file system. Actually, you can order less of it. If I do not say that angry, don't worry about it.
+    Or read or write. That's economic. That's all I need you to know.
+    All right. So any any question in the comments.
+    Well, ready to talk about. Yeah, talk about your question.
+    Right. So. Well, executives.
+    I know, right? So I means one. Index.
+    Yeah. So. I think one way to think think of this is so I know mass index.
+    No. Think of. So this goes on.
+    I know why I know this and you can think of it I know is a rate of note away of note, a list of numbers.
+    And in this particular example, how big is that array?
+    How many how many elements does that or we have 80 that 80 and we atomos I no index.
+    No. And the right index? No. I know.
+    And we I know his number. I number. I know that number.
+    But the number basically is index y. You can think of this.
+    Okay. So I think that's what we need to know.
+    Now, this and any other questions we are ready to move on to address.
+    Okay. And I need to show you this.
+    Okay, so first thing first, let me complete a completed demo last time.
+    So I think that I need a start, so.
+    Okay, This is important. If you have my my sequencer, my SQL server running all easy to priest of the first.
+    Otherwise, it's going to be very slow. My contacts somewhere.
+    So I need to start on my SQL server before I start my address.
+    Right. Now, remember last last week I got one that I make.
+    I told you, I think that we went through the process of starting with Did I even give it?
+    I started with the example. So I need to go to me.
+    See, I do. And I think here, how do I start?
+    As being right, as being start the first.
+    Hopefully you got started. Okay, JP's all three.
+    Make sure you have all three. Let me give you some time.
+    I go too easy to make sure start this established in most people always remember that.
+    Later we have less. They will want Pi, Spock, rest.
+    Spock also need to start somewhere because my mouse cursor was using lot of emoji, almost 50% of emoji and we only have one gigabyte away.
+    I mean all actu. How many people have all three to see?
+    All three K single people still working on follows you.
+    You have all three. Let's talk to our system.
+    I say being nice, being addressed as do errors slash.
+    I'm not sure if I have anything there. I might have. Yeah, I have a two year.
+    Okay. I can create another tablet that's called a home How to Create a Trilogy.
+    To make the slash whole.
+    I don't have. Do I have a home galaxy? Not yet. Not yet.
+    So I guess. I guess. Here's what I'm trying to say.
+    Can I. Can I. Can I do this? Ubuntu while sim providers have a home and job.
+    Can i. Could I ask you this? Do I want it?
+    Do I already have home? Now let me try that.
+    Do I already have a home? D'allergie. No, no, no, no, I.
+    I mean, I don't have a home here.
+    So is complaining that in order to create a subtitle under home.
+    What do I need to do now? I need to make which dialog Holmfirth.
+    I don't have home in the total. Don't get confused by this.
+    We're talking about the dehumidifier system.
+    Not my local fire system. Then I can make a dialog to underscore people.
+    People see what's going on. There's a creating in a deal with.
+    Question. If you do not have a name though, then you want to start first.
+    Yeah, stuff first and room format of the file system. Okay. So if you don't have it, you don't know.
+    Yeah. You start first. Write the stop as being slash stop the first search, stop the everything first.
+    Then you want to say being stressed they know they know format whether to command.
+    I do not ask you the first one. Right. Basically do member Starr and it's thought is under which that actually being or is being.
+    As being as means water system being a system system.
+    Binary is a program for maintaining the system are under being beings by means binary.
+    So far we just just look at just that it has been using address the only program That's right.
+    If you're missing any anyone anyone else having trouble missing, then no.
+    And I think this should has dissolved. Any trouble.
+    That's your second tab, right? Second, Have we posted your second letter?
+    Not yet. No second letter, but basically asking you to run landlords example and explain.
+    It's boring what each command is doing.
+    So it's second level. Super positive. So good.
+    Can I. Can I move on? So. I can do mood, actually.
+    Remove that and I'll do that now. Okay. So this there's a push something and put something there.
+    Okay, so here. How about put a little meat on me?
+    Let me see right here. So being FDA was not a done deal.
+    Device. Put, put means what?
+    That's put me. No grading people.
+    Remember, I did ask you to use as a freebie. Did I ask you to use FTB as FTB?
+    No, no, no. So put is uploading or downloading. Uploading something to each of us, right?
+    We are talking to each device. So that's put a local file.
+    There's a local file. You see, I have it on me.
+    Like here. You see that you have put under your home, John?
+    That's right. Yeah.
+    Any question? Okay.
+    Now, how do I see the content of the file I put on the put the put on HD health care command word?
+    Yeah, but now I need to say Cat, what else should I say?
+    And you need to make it a completely slash.
+    Whereas leader the lead army we all address. Under what?
+    Slash. What? Home. Slash what? Joy, I don't forget it.
+    I need to. I need to put a complete energy. They basically lead on me questioning you.
+    So for the last.
+    A go to for the pokemon. Can I.
+    Can I. Can I put the little test there? You.
+    No, no, you don't want to do that because Paul is putting what to what to wear.
+    Yeah. You want to put the request first? Yeah. I think the question is, does the automatic order does matter.
+    Okay. He has copy command. So far, so good. Your question?
+    I try to make the directory. That means you could.
+    Can you check it? You could. You could, yes. And make sure you have all three servers running.
+    You have all three selves running. I know you're getting at there.
+    Saying what, Commissioner? Access to the IRA connection Refuse.
+    You have a nanosecond reading. Yeah, that I would need to take a look at anyone.
+    I was having a problem. Access denied? Yeah, somewhat.
+    I think that start with a hanging in the middle. Any. Any trouble?
+    Yeah. What kind of trouble? You have a name, address, photo.
+    The same. Yeah. That said he. I think he's problem too.
+    If they know it's not their status of us, it's How do you start a server as being a member?
+    Why stop Dash? Why do you start as such?
+    You start the first. Once you have the server stop, then you want the new format.
+    Okay. Because I'm not having to. How how, how would you format the file system?
+    Which command? And being being slashed.
+    Which which program As Steve's.
+    Yeah. Same program that we are using to try to put a stop there.
+    Right. To do that to to to execute of our system command.
+    I mean, the. Those commando familiar with the new format being slash.
+    Name no dash format. Okay.
+    I saw some hand on the bag and you have trouble. Same part.
+    Yeah. So they know stuff the surfers ask you to them being as dress name.
+    No bash format. Right. Their status us again, hopefully this resolved issue.
+    Now. No idea about the permit permission to idle. Poll Post Question Post question on Piara.
+    Get any out of trouble. Yeah.
+    Permission denied. So when you ask YouTube's, Are you able to see all three servers?
+    Jess Gibb Yes, that means you haven't started the summer.
+    Yeah. You want to start a server? Yeah, it started.
+    How do you start a server, go under this dialog as being start, right.
+    I'm not sure if that's, that's the case as well. So you want to make sure also.
+    So is that it. Yeah. Right. Any, any anything else that.
+    Yeah. So now if the three the inspiration will be flying wine, but there could be a problem with these rotation.
+    But usually the there's some peculiarity that that that that prevents and they know one starting up for some reason.
+    Yeah. And sometimes that they don't it doesn't show up Yeah maybe got corrupted I don't know but even then or not showing up the
+    typical is this status server new format usually resolved problem solve the problem anyone anyone not having the data?
+    No. Anyone not having data? No. Yeah.
+    If you don't have a data, no. Okay. Well you can do it again.
+    Start a server. You know what to do the starter so it there.
+    What do you want to do to go to slash town.
+    Yeah. Slash town. Do the areas where are you able to locate.
+    Do you can do first directory. I able to see that. How do you Bandera.
+    Yeah. Go on to that. Do two areas go under DVS two areas you want to remove everything and the data that actually remove remove.
+    But I have a two option here was are they around?
+    What does army anyone? Someone know?
+    Yeah, some people know because they're pretty close. They are going to wipe out everything right under data.
+    Be careful in not executing this in the wrong place. Yeah. Once you've done that first, make sure it's over.
+    Once you're done that and I think you start a server, usually that sort of problem.
+    Okay. So there are no missing data, no missing in CPUs.
+    Go to use slash slash can slash.
+    How do ubuntu this directory store all the files?
+    Did you realize this now actually stole here or did I get to go to this direction whenever we were doing make dodge as a cab.
+    Basically talked to this that that is start starter store day. Okay.
+    And they don't know it's missing you want to remove that so that when you start a server
+    you actually create new create a new brand new data data download data directory.
+    Okay okay to to typical problem we people people saw in a pass.
+    So I know the solution right yeah so yeah to cover.
+    Yeah. Right.
+    So remote data is basically missing data. No. In GBS in the neo-darwinism.
+    Missing name. No. Yeah. Missing Nano. Then you did a stop and look for that.
+    Yeah. Okay. Thank you. Our. No problem. You good?
+    Uh, that's. That's mobile here, right? So essentially this we did a put we can also copy a while for an address to another SD.
+    I was told D'apres. Okay, so all I need is a copy.
+    How do I say copy c p c p.
+    So let me just say hello to test. How about it?
+    So we make a copy of a read to me that has an and to create a new file called Hello that has basically this have having the same thing, same content.
+    No. I need to ask you under. How do I. Okay, then do the errors again.
+    Listing this dialog. Dash you have additional. There are two files right now.
+    Exactly the same. I'm copying to lead me and to a new while.
+    Yeah. So what?
+    What? So I guess the question would be what? What does he do?
+    So we don't know. So I do not have a whole lot of tests before I skewed because I CPA.
+    So essentially make it make another copy of the file.
+    Yeah. Good.
+    Can we get rid of the halo that has which command to color that file?
+    How do I get her? A hot chocolate or fire? CP instead of sleep with it, I say.
+    I want to delete a file. I am. Yeah.
+    The files should be gone. I can check. Should we call?
+    Okay. There's only one file under John Derek. Anything else I want you to know?
+    By the way, I think there's. Question.
+    Increase. Do we have to for this reason? Because. Say it again.
+    So when I when we create a dialog, then yeah, you go to the the points of all of this, let's try this.
+    So under this dialog I think that's, that's why.
+    All right I think Lead me is still there.
+    So your question is how do, how do we delete all the file under this dialog because oh you if you want to do it,
+    did it want if you want to delete the dialog, why don't we try that.
+    So, So delete dialog is what I am.
+    What. There I am the.
+    Yeah. Let's see what work. But keep in mind that you already have something I know is not empty, which means you can try.
+    You might have a lonely cause. Yeah, but to be say, can we do.
+    I am first. And slash. This will hopefully get it out of the underworld.
+    And a job. Right. Then I can remove John is a.
+    I don't need to put the last leg, but I think you probably know. Can I do the I again?
+    Areas slash home and there's a home there.
+    John, should we call? Yeah, right.
+    Yeah. I think that's all I need you to know.
+    That's Lukhanyo am KTAR. For what?
+    Making their here. You need to do this step by step, right?
+    You cannot say I'm CD slash ABC slash slash.
+    Please let people see what I'm saying. You need it. You need to say make it like a mega-deal slash a recipe and make it to make a decent S,
+    a, B, and C, okay, So make it easier for making dialog and I remove.
+    You want to make sure is empty words. Why? How do I how to do that?
+    I see people copy. Okay.
+    And we know. We know city when I city we know put.
+    In addition to that, you also have one get.
+    Okay, let's get something to. I have something here.
+    I don't hear anything. So I need to I need to post something here.
+    Can I put around a home? I'm going to put the lady me lead to lead me on the home?
+    Yeah. Then I going get.
+    Get under homes. Okay. They are local.
+    We are going to call it. Hello? The test. Hello. Local that has.
+    That's even. She works. Do I have a hello local?
+    I do. It works. Okay. Pope is uploading guys.
+    This one. Downloading?
+    Yeah. I think what, Don?
+    And I think Latin to show and show us is I mean, in terms of the command,
+    I show you the Web Web page, the Web site with a more complete list of a command.
+    Okay. Can I. Okay. Someone still looking at a screen.
+    Yeah. So you are talking about a comeback here or talking about the.
+    Because I see them being astrology.
+    Astrology. Yeah.
+    So we can take a look at. So being is it that actually we all see that CDP being due to errors Lozada.
+    So stress is basically your command under that. Yeah it's a command as it is is a program.
+    So what? So if you want to do whatever you need to do with the effort.
+    That's right. That's right. Yeah. Basically in order to, to help to address file system, I need,
+    I need to use this particular particular program is quite to use and this program is located under the being directory.
+    Exactly. And this program take a lot a number of arguments.
+    Yeah. It is as they have program also allow you to format it.
+    They know, remember. Okay.
+    Hopefully you are okay. And like I say, I want to try to find the website.
+    Why do I never see. Let me do the search for her.
+    Do. File system command.
+    Can I show you right away? Yeah, I think that way.
+    That's not a war. Process.
+    No. Show. Come in, Show.
+    Come in. There.
+    I think this is one. Yeah, I think this one.
+    I can shoot it now. So do the Google search.
+    If I do the search search. I had heard who do our system share command.
+    So basically, while searching on share, I share. They bring you to this page.
+    And as you have a more concrete list of a list of a command, a list of command.
+    We know Seattle. Let's go to. We know CPR.
+    Get our ass dere put.
+    I am. I think there's. I am recursively that recursive stat command.
+    Well, actually, that's ignored. Yeah, there's a lot of options.
+    It's kind of confusing and unnecessary. Confusing. But I think that's going to help people if I just give you the some resources.
+    At this time. Can I step back and talk about the idea of a system being a working high level?
+    I look at the architecture. So how do has two component people remember what they let out?
+    If you happen to know a do has two components, what are two components and how do.
+    Why is stress? We have been working with the airlines water.
+    Mobility. Yeah. So. So how do has two things.
+    One is for storage, distributor storage, which is file system.
+    Right. And compute payroll computation, which is MapReduce storage and data processing.
+    Data storage, data processing. As part of their debt management management business.
+    Why? So how do is larger scale distribute per patch processing framework infrastructure?
+    A lot of data, a lot of computation data, distributed computation.
+    Distributed batch processing means no interaction.
+    But you submit a job, you go grab a coffee, you come back 20 minutes later and 20 minutes later, draw, finish.
+    During that 10 minutes that your processing time, you don't interact with this job.
+    Batch processing. Okay, So fast forward to this particular sly.
+    I think I probably show you this line in the first week where yeah, actually recall what we have now.
+    We have we know a great deal that we know a lot more.
+    Okay, so this address set up has has a single name.
+    No. Right. And they know. Okay, how many did I know?
+    We didn't know. Yeah, they know. Store metadata data.
+    Yeah. Anything. Could you. Could you now tell me the metadata about a fool?
+    This fool, I a fool. What kind of metadata are we looking at?
+    Of of who did that? Well, I didn't know that. What kind of metadata?
+    I can show you additional information. Additional information here.
+    Yeah. I think this one poppy score.
+    So, uh, this file is, uh, people recognize the format of this file.
+    Zemlya. So this small is.
+    I smell flour basically is. It's.
+    It's telling us why. What? What is in name?
+    No. Okay, so. Okay,
+    So as the Avis file system has a utility to allow you to download data in a no to XML
+    file and this is how I got the example while people people see what I'm trying to say.
+    Yeah. So this page is the file image, right?
+    Image, a thumbnail image and then in a small format so people can see inside this small file, you see that A.S.
+    People see the intersection inside this I know section has a I know element.
+    This is the Alamo. This is a Star Trek. And we're going to see this.
+    We're going to look at examples soon. So Star Trek and Tech.
+    So they said one particular I know one party that I know.
+    I know. Oh.
+    Now, I know Section is telling you this question has how many flowers or end or dialog and dialog?
+    How many? 38. Yeah. Okay. And you presumably you're going to have a 30 a I know element here.
+    30. I know, I know.
+    Has ID remember I number.
+    I know number has a tie. Has it higher profile or what.
+    They're lucky. Has a name, but somehow this name atomized, empty.
+    Is it has a special meaning. Meaning this dialog is anyone want to guess what dialog.
+    Jesus, Lou, I am timing.
+    What is the impact? People remember more modified time.
+    Yeah, people remember the Punisher. Seven, five, five.
+    Me. What does that one five?
+    I mean Siamese. Readable, readable.
+    Executable. Why me? Why?
+    What is it? Why in binary? 110101.
+    So readable as curable. Yeah. Good. You can always have it.
+    So this a dialog here. This I know, is directly on file.
+    Well and has additional information about what?
+    The blogs by blog that store the content of while we brought her brought ID and some kind of size.
+    How how much data store there were small file.
+    Okay. And this in addition to that, you see this.
+    You also has this I know has something called preferred proxies, because I'm I have someone tell me what numbers that it's kind of difficult to see.
+    But anyway, I happen to know what numbers that roughly how many?
+    534. Okay.
+    So the proxy size. Right. And this number. Right.
+    This number is 134. 1 million.
+    Did I get it right? I think that's a million, right?
+    Yeah, 134 million. About. I can I tell you now, this this actually is said a number some some megabyte is 120 a.
+    Megabytes. One every megabyte as a means is 128 million people agree?
+    How many pies are there in? 128 megabytes. He's 128 times what to throw what Pele.
+    Megabyte. Remember to to the power No.
+    Six Maccabi. Remember first week.
+    Okay, Python three. Does how do I say two to the two, to the tempo, or how do I say the two?
+    There's a 2 to 10 power, right? Yeah. So 120.
+    A power to track which power. 100 only a megabyte to total.
+    Which power two to the ten is killer.
+    But don't forget, first we.
+    Megabyte is a two tier lower [INAUDIBLE]. I think that's a number I see 234 to 7 217 and 728.
+    Right. That's exactly the number. So as Steve has, it's all logical Baraga, size, logical profile, and this size, this one in this in this dress.
+    The before Blocksize is 128, one megabyte.
+    It's much larger there and for some reason.
+    For some reason. Yeah. So far, so good.
+    So essentially this they all at an adult where looking at a metadata here,
+    a replication factor is one that I think we can go back and now go back to Sly and and Kokomo.
+    So in this particular set up, what would be the replication factor?
+    You, too. Yeah. So they means.
+    Well, every block the system keeps to How many copies?
+    Two copies or two level cuts. People see that to know the cost.
+    For example, who right now raise money for food.
+    You should have a lot of the metadata in mine. I just show you the size, I don't know, permission, things like that.
+    But in addition to that, can I tell you this important piece of metadata is a location or blocks,
+    location or block sitter who is a file, who has how many block?
+    Three. What are the Bronx Pride Number one?
+    Number two, ANOVA. Number four, Every frog has How many copies?
+    Two copies could replicate. For example, number one, two copies.
+    Two copies are brought. Number one are stored, which there are no.
+    A and a what? C file system address.
+    Need to need to know the location of this one and the one these two replica agree the location data or metadata.
+    Metadata so kept by name? No. Or data, No name, no important piece of metadata.
+    Yeah, everything is. So the question is, say the question again.
+    How do you know it's replicated? Because we're talking about a block one way or one has a copy here and also copy there.
+    See either. Oh, yeah, bro. Number one, you.
+    Yeah. I should be able to survive another 5 minutes.
+    Okay. So far, so good. I think there's not much to see and anything else I want to see.
+    So again, again, my point here is location or blocks is would be very important piece of metadata.
+    Then in the case of SD, I was crying, actually got exposed to the location, as we will see soon.
+    Okay. Perhaps the last thing to look at today is to understand why 128 was such a pick up where we pick file size.
+    If you start a question, if you started data ice, what do you what do you want to do with the data or get the two questions?
+    If you ever use that dress, if you ever use, how do you want to put a lot of data there?
+    A small amount data, a lot of data may be killed by a terabyte, right?
+    Yeah, that was question number one. Question number two, what do you want to do with that data?
+    What kind of a question you want to ask. Let's say you put some sales data.
+    How about sales data?
+    Everybody knows sales the last five year sales data to their last five year Wal-Mart sales data, transaction data to the to to do.
+    Okay. So you want to do something with that? Analyze some data. So which one would be more typical?
+    You're going to use their produce to look at a particular transaction at a particular time by a particular user.
+    That's that's the scenario A Scenario B, you'll want to find the annual sales amount in a certain in a certain category of product.
+    Which one is more typical? The second one. The second one.
+    Got a touch more data, right. Do you typically log on in court looking to put data to do to in order to do the Google search?
+    You search instead of you going to. So your job is more like a batch processing to to to to figure out annual sale of annual sales amount.
+    You're going to you're going to do law. You're going to see a lot of data, Right.
+    And your hope is that your data will be sequential, random, hopefully sequential.
+    Yeah. Okay. For that reason, you want to put a lot of data together in a big rock block, 120 a megabyte.
+    But you don't want to make it a broad, a too big a super big lie.
+    So some kind of tradeoff here. So we can do the first sequential read, Right.
+    And where you allocate a space. That's a store that you're going to store, 220 a megabyte in one shot, hopefully sequential.
+    And on the other hand, you have a few a metadata maintained, at least by the file system.
+    Okay. Here's what I'm trying to say. I think the last point. So a hundred to the military that we actually make changes here.
+    Right. Well, if this y y.
+    So here's what I'm trying to say.
+    DCF have a one. Occupy How many? BLOCK One bar, one number.
+    Say one way. Now, this April number seven has 120 megabyte, 920 megabyte instead of there's only one part in it necessarily because block size is 128.
+    If a box size is four kilobyte, how many block would you need?
+    A lot of more. Thousands more, right? Yeah. And don't you need to know the location of individual small bras?
+    Right. And they could be anywhere. A lot of metadata to remember, right?
+    So there's a number of metadata because they only need to know the location of one area.
+    So this is basically this. This. That's the intuition. Okay.
+    So then we actually stop here.
+    And like, like I said, the that's really like habit that that's that's today we managed to have a complete that whole SARS people agree.
+    Yeah and there's one thing and today we also finished our system.
+    For any file system we have ways to address.
+    Oh how complex lock your loved one has is is is done right Lebanon's download and let two should be posted as soon as you see your network is.
+
