@@ -3,7 +3,7 @@
 ## Create mindmaps from notes
 You can run the following command to create a mindmap from a note file:
 ```bash
-py mindmap.py -i "generated-notes.txt" -t "Lecture 3: File systems" -c "Foundational data management" -mt 10 -th 5 -o "generated-relations.txt" -mf "mindmaps"
+python mindmapCreator.py -i "generated-notes.txt" -t "Lecture 3: File systems" -c "Foundational data management" -mt 10 -th 5 -o "generated-relations.txt" -mf "mindmaps"
 ```
 where:
 - `-i`  : the file containing the notes to extract relations from (relations, or triples, are of the form `"<subject> - <predicate> - <object>"`)

@@ -1,0 +1,267 @@
+file systems - are part of - the foundation
+database systems - have - file systems
+foundation - includes - file systems
+file systems - support - database systems
+database systems - rely on - file systems
+file systems - store - data
+data - is organized by - file systems
+file systems - manage - storage
+storage systems - are crucial for - data management
+data - goes to - storage systems
+storage systems - require - control of block devices
+data - is stored in - block devices
+2 typical block size - leads to - reading and writing data
+3 reading and writing data - in - blocks
+6 typical block size - leads to - reading and writing data
+7 reading and writing data - in - blocks
+file systems - consist of - files
+files - can be accessed - by users
+'stat' - provides - metadata
+'stat' - provides - data
+files - contain - metadata
+files - contain - data
+users - can access - files
+metadata - is information - about files
+data - is information - within files
+file systems - showcase - importance of data organization
+storage systems - require - proper data organization
+data management - covers - File systems
+data storage - relies on - proper organization
+file size - is - metadata
+metadata - represents - the size of a file
+file - contains - data
+data - is stored in - file systems
+file systems - organize - data
+file - is a - unit of storage
+file systems - manage - access to files
+file systems - include - metadata
+metadata - contains - file name
+metadata - contains - author
+file systems - distinguish - data
+data - stored within - file
+file - created by - author
+file systems - store - data
+metadata - identifies - file
+author - associated with - file
+file systems - organize - data
+input/output operations - are crucial in - data management
+the units used - in - storage systems
+understanding - is crucial in - data management
+storage systems - use - units
+input/output operations - are used in - data management
+understanding - is essential in - storage systems
+block allocation - is essential in - storage systems
+block allocation - is essential in - storage systems
+storage systems - contain - blocks
+block allocation - is essential in - storage systems
+system - allocates - specific number of blocks
+file - based on - size in kilobytes
+size - in kilobytes - file
+block - allocated for - file
+system - determines - number of blocks
+file - determines - block size
+number of blocks - allocated for - file
+persistent storage - retains - data
+ssd - contrasts with - main memory
+data - is lost - unsaved data
+storage systems - are important for - computing
+main memory - is where - data is lost
+ssd - is an example of - persistent storage
+main memory - is faster than - SSD
+ssd - functions as - a storage area for working data
+ssd - needs - data read into main memory
+data - is read into - main memory
+main memory - is used for - faster processing
+main memory - is a - temporary storage
+ssd - is a - type of storage device
+data - is stored in - SSD
+storage device - Can transfer - Data
+nanoseconds - Reveals - Speed
+storage device - Can transfer - Data
+nanoseconds - Indicates - Faster access times
+storage device - Has - Access time
+nanoseconds - Indicate - Faster access times
+nanoseconds - indicate - faster access times
+milliseconds - are more common in - hard disk drives
+access time - is measured in - nanoseconds
+bandwidth - is important in - data storage discussions
+latency - is important in - data storage discussions
+latency - refers to - waiting time for data access
+bandwidth - is a measure of - data transfer rate
+latency - refers to - time required for the device to get ready
+device - has - latency
+data - is read or written - by device
+latency - affects - data access speed
+bandwidth - measured in - bits per second
+bandwidth - determines - how much data can be transmitted through a network or device
+data transmission rates - are affected by - bandwidth
+network or device - can transmit - data
+bandwidth - affects - transmission speed
+transmission speed - is determined by - bandwidth
+bandwidth - is measured by - bits per
+data management and storage systems - impact - data access speed
+data access speed - impacted by - latency and bandwidth
+latency - affects - data access speed
+bandwidth - affects - data
+hard disk drives - consist of - platters
+multiple surfaces - are called - heads
+heads - are used for - reading and writing data
+hard disk drives - are used for - storing data
+storing data - is done by - reading and writing data
+reading and writing data - is done using - heads
+head - can read and write - data
+top and bottom sides - can read and write - data
+hard disk drives - have - rotation speed
+data - is stored - on disk surfaces
+hard disk drives - access - stored data
+hard disk drives - have - surfaces
+surfaces - store - data
+hard disk drives - typically rotate at speeds - like 10,000 RPM
+rotation - influences - data access speed
+rotation - influences - latency
+data access speed - is influenced by - rotation
+latency - is influenced by - rotation
+hard disk drives - rotate - at speeds of 10,000 RPM
+hard disk drive - has - multiple sectors
+data - is read - in entire sectors
+data - is written - in entire sectors
+data - is read - in entire sectors
+data - is written - in entire sectors
+sectors - are essential for - identifying and accessing specific data on a storage device
+storage device - improves - data organization and retrieval efficiency
+hard disk drive - is - a storage device
+data - is organized by - sectors
+data - is retrieved by - sectors
+sectors - improve - data retrieval efficiency
+sectors - improve - data organization
+hard disk drives - use - address schemes
+cylinder - contains - concentric tracks
+hard disk drives - locate - data
+hard disk drives - access - data
+cylinder - is - the unit of measurement
+cylinder - has - Multiple tracks
+heads - access - Specific tracks
+heads - read/write - Mechanisms
+data - in terms of - Cylinders
+data - in terms of - Heads
+data - in terms of - Sectors
+heads - read/write - Data
+heads - access - Specific tracks
+data - located at - exact location
+hard disk drive - enables - efficient access
+efficient access - leads to - storage management
+chs addressing scheme - used for - hard disk drives
+cylinder - represents - vertical location on hard disk drive
+hard disk drives - involve - CHS addressing
+cylinder - is a part of - CHS addressing
+data - is stored on - the disk
+cylinder - contains - multiple tracks
+tracks - consist of - sectors
+sectors - store - data
+identifying - allows for - storage management
+data - is stored - in sectors
+storage management - is possible - with identifying sectors
+tracks - are connected to - sectors
+hard disk drive - is used for - data storage
+sectors - are used for - data storage
+hard disk drive - is used for - data retrieval
+hard disk drives - experience - rotational latency
+hard disk drives - rotate - to access a particular sector
+hard disk drives - have - rotational latency
+storage management - is - efficient
+efficient data retrieval - is important for - storage management
+hard disk drives - use - rotational latency for data access
+hard disk drive - Changing direction of rotation - Inefficiency
+hard disk drive - Similar to - Driving a vehicle
+hard disk drives - have - seek latency
+more time - increases - latency
+bandwidth - measured in - megabytes per second
+bandwidth - indicates - rate of data transfer
+storage system - has - bandwidth
+data - transfers at a rate of - 50MB/s
+data transmission - is determined by - bandwidth of the system
+efficiency of data transfer speed - is determined by - latency
+data transmission - is affected by - latency
+volume of data - is divided by - bandwidth
+bandwidth - affects - completion time
+bandwidth - dominates - sequential workflow
+system - spends - more time
+data transmission - compared to - latency
+sequential workflow - dominated by - bandwidth
+efficient data transfer rates - crucial for - system
+workflow scenario - impacted by - latency
+data transmission - impacted by - latency
+system - may incur - delays
+system - need for - seeking
+system - need for - rotating
+system - need for - accessing
+system - delays - due to
+latency - plays a crucial role in - how long it takes to access and transmit data
+bandwidth - affects - the completion time for transmitting data
+latency - dominates - random workflow
+system - spends - more time
+data access - compared to - data transmission
+data management - optimize - system performance
+latency - highlights - significance
+system - performance - optimize
+data transmission - compared to - actual data transmission
+ssd - consists of - multiple memory chips
+individual memory chips - have - main memory
+main memory - used for - data storage
+ssd - is made up of - multiple memory chips
+individual memory chips - contain - main memory
+ssd - contains - memory chips
+blocks - may have - multiple pages
+pages - used for - data storage
+pages - used for - retrieval operations
+data storage - is performed by - pages
+retrieval operations - are performed by - pages
+blocks - are crucial for - understanding the concepts of SSD storage
+pages - are used for - writing and reading data
+data - is written and read in - pages
+ssd - contains - individual cells
+data - stored as - charge
+charge - represents - 0 or 1 state
+floating gate - stores - data
+data - represented by - 0 or 1 state
+charge - stored in - floating gate
+floating gate - stores - data
+cell - stores - data
+floating gate - applies - charges
+control gate - uses - positive charges
+control gate - attracts - electrons
+control gate - has a high positive charge - essential for programming data
+ - SSD - involves - writing data
+ - process - involves - applying a very high positive charge
+ - data - involves - applying a very high positive charge
+ - process - involves - Quantum Tunneling
+ - Quantum Tunneling - represents - state of 0 or 1
+ - state - based on - presence or absence of electrons
+ - control gate - attracts - electrons
+ - electrons - through - Quantum Tunneling
+ - floating gate cell - represents - state of 0 or 1
+ssd - involves - reading entire pages
+ssd - is used for - reading data
+control gate - is responsible for - applying charge
+ssd - Changing data - 0 to 1 or vice versa
+charge - adjusting - presence of electrons
+floating gate - manipulate - charge
+data states - represent - different
+ssd cell structure - contain - data states
+data states - stored - SSD
+ssd - updates - data
+full block erase - performs - data
+individual cells - updates - data
+data management - is - efficient and effective
+ssd - performs - full block erase
+programming data - involves changing - data states
+ssd - involves changing - data states
+high negative charge - applied to - control gate
+control gate - represents - absence of electrons
+data - undergoes - block-level erase operation
+cells - store - data
+ssd - involves - programming
+data - modification - SSD
+charge - applied to - cells
+accurate data updates - integrity - storage device
+data updates - integrity - storage device

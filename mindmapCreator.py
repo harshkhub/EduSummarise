@@ -193,9 +193,9 @@ if __name__ == "__main__":
             continue
         group = [triple for triple in all_triples if triple[0] == entity or triple[2] == entity]
         G = build_knowledge_graph(group)
-        visualize_knowledge_graph(G, entity=entity)
+        visualize_knowledge_graph(G, entity=entity, path=args.map_folder)
 
     # write the triples to a file, with the format "<subject> - <predicate> - <object>"
-    with open(args.output, "w") as file:
+    with open(args.map_folder + "/" + args.output, "w") as file:
         for triple in all_triples:
             file.write(f"{triple[0]} - {triple[1]} - {triple[2]}\n")
