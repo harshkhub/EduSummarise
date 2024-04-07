@@ -9,7 +9,7 @@ from openai import OpenAI
 
 client = OpenAI()
 
-def extract_triples(text, max_triples=10,
+def extract_triples(text, max_triples=3,
                     title="Lecture 3: File systems",
                     class_name="Foundational data management",
                     ):
@@ -103,13 +103,13 @@ def visualize_knowledge_graph(G, entity=None, path="mindmaps"):
     """
     plt.figure(figsize=(10, 10))
     pos = nx.spring_layout(G)
-    nx.draw(G, pos, with_labels=True, node_size=3000, node_color='lightblue', font_size=16)
+    nx.draw(G, pos, with_labels=True, node_size=3000, node_color='lightblue', font_size=12)
     edge_labels = {(u, v): d['label'] for u, v, d in G.edges(data=True)}
-    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=12)
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10)
     # save this figure to file `{path}/map-{entity}.png`, create the folder if it doesn't exist
     if not os.path.exists(path):
         os.makedirs(path)
-    plt.savefig(f"{path}/map-{entity.replace(' ', '-')}.png")
+    plt.savefig(f"{path}/map-{entity}.png")
     plt.close()
 
 def clean(triples):
@@ -147,9 +147,9 @@ if __name__ == "__main__":
                         help="The title of the lecture")
     parser.add_argument("-c", "--class_name", type=str, default="Foundational data management",
                         help="The name of the class")
-    parser.add_argument("-mt", "--max_triples", type=int, default=10,
+    parser.add_argument("-mt", "--max_triples", type=int, default=3,
                         help="The maximum number of triples per note to extract")
-    parser.add_argument("-th", "--threshold", type=int, default=5,
+    parser.add_argument("-th", "--threshold", type=int, default=4,
                         help="The threshold for the frequency of entities to keep in the extracted triples")
     parser.add_argument("-o", "--output", type=str, default="generated-relations.txt",
                         help="The file to write the extracted triples to")
@@ -174,28 +174,34 @@ if __name__ == "__main__":
     triples_0 = set([triple[0] for triple in all_triples])
     triples_2 = set([triple[2] for triple in all_triples])
     
-    # join the two sets
-    unique_entities = triples_0.union(triples_2)
     # create hash of entity-frequency
-    entity_freq = {entity: 0 for entity in unique_entities}
+    entity_freq_0 = {entity: 0 for entity in triples_0}
+    entity_freq_2 = {entity: 0 for entity in triples_2}
 
     # count the frequency of each entity
     for triple in all_triples:
-        entity_freq[triple[0]] += 1
-        entity_freq[triple[2]] += 1
+        entity_freq_0[triple[0]] += 1
+        entity_freq_2[triple[2]] += 1
     
     # remove triplets whose frequency of triplets[0] less than 2 or triplets[2] less than 2
-    all_triples = [triple for triple in all_triples if entity_freq[triple[0]] >= args.threshold or entity_freq[triple[2]] >= args.threshold]
+    all_triples_0 = [triple for triple in all_triples if entity_freq_0[triple[0]] >= args.threshold]
+    all_triples_2 = [triple for triple in all_triples if entity_freq_2[triple[2]] >= args.threshold]
 
-    # group triplets that share the same subjects and objects and build knowledge graph for each group for entities in unique_entities:
-    for entity, val in entity_freq.items():
-        if val <= args.threshold:
+    # group triplets that share the same subjects and objects and build knowledge graph for each group
+    # for entities in unique entities `entity_freq_0` and `entity_freq_2`:
+    all_triples = [all_triples_0, [], all_triples_2]
+    for i, entity_freq in enumerate([entity_freq_0, {}, entity_freq_2]):
+        if not entity_freq:
             continue
-        group = [triple for triple in all_triples if triple[0] == entity or triple[2] == entity]
-        G = build_knowledge_graph(group)
-        visualize_knowledge_graph(G, entity=entity, path=args.map_folder)
+        for entity, val in entity_freq.items():
+            if val <= args.threshold:
+                continue
+            group = [triple for triple in all_triples[i] if triple[i] == entity]
+
+            G = build_knowledge_graph(group)
+            visualize_knowledge_graph(G, entity=entity + "-" +str(i), path=args.map_folder)
 
     # write the triples to a file, with the format "<subject> - <predicate> - <object>"
     with open(args.map_folder + "/" + args.output, "w") as file:
-        for triple in all_triples:
+        for triple in all_triples[0] + all_triples[2]:
             file.write(f"{triple[0]} - {triple[1]} - {triple[2]}\n")
