@@ -1,0 +1,13 @@
+.option-button{
+    background-color: rgb(27, 156, 231); /* Green */
+    border: 1px solid black;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    display: block;
+    width:180px;
+    margin-left: 50px;
+}
