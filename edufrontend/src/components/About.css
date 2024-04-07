@@ -1,0 +1,25 @@
+.about-container {
+    background-color: #f4f4f4; /* A light background to distinguish the section */
+    padding: 40px 20px; /* Ample padding for visual space */
+    margin-top: 60px; /* Adds space from the top, consider if you have a fixed navbar */
+    border-radius: 8px; /* Softens the edges */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Ensures text lines are not too wide for readability */
+    margin-left: auto; /* Centers the container */
+    margin-right: auto; /* Centers the container */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    margin-top: 100px;
+}
+
+h1 {
+    color: #333; /* Dark color for contrast */
+    font-size: 28px; /* Prominent size for the section header */
+    margin-bottom: 20px; /* Space between the title and content */
+}
+
+p {
+    color: #666; /* Slightly softer color for the main text for easier reading */
+    font-size: 16px; /* Optimal size for readability */
+    line-height: 1.6; /* Spacing between lines for readability */
+    text-align: justify; /* Ensures a clean, aligned look for the text */
+}
