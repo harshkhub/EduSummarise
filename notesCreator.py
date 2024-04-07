@@ -72,7 +72,7 @@ previous_messages = [
     {"role": "system", "content": "You are a perfectly articulate and knowledgable chatbot that turns lectures from USC Computer Science Foundational data management class into detailed notes for students to learn from. You are currently teaching Lecture 3: File systems. Here is a transcript of a chunk of the lecture, Please convert this speech into notes. Speak in 3rd person, use two sentence bullet points only, and only include relevant information on the topic of this class. Do not ever summarize the transcript given above or summarize your notes below, explain the concepts taught in detail."}
 ]
 
-f = open("myfile.txt", "w")
+f = open("generated-notes.txt", "w")
 
 all_notes = []
 for chunk in chunks:

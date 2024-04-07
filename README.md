@@ -1,5 +1,12 @@
 # EduSummarise
 
+## Create notes from transcripts
+You can run the following command to create notes from :
+```bash
+python notesCreator.py
+```
+, this will create from transcripts in [transcript.txt](./transcript.txt) notes stored in [generated-notes.txt](./generated-notes.txt) file.
+
 ## Create mindmaps from notes
 You can run the following command to create a mindmap from a note file:
 ```bash
@@ -13,3 +20,13 @@ where:
 - `-th` : the threshold for the frequency of entities to keep in the extracted triples
 - `-o`  : the file to write the extracted triples to
 - `-mf` : the folder to save the generated mindmaps
+
+<!-- add figures from ./mindmaps/ -->
+Sample generated mind maps for a lecture on **File system** for the class **Foundational data management** at USC are shown below:
+- ![Bandwidth](./mindmaps/map-bandwidth-0.png)
+- ![Data](./mindmaps/map-data-0.png)
+- ![Data](./mindmaps/map-data-2.png)
+- ![File-systems](./mindmaps/map-file%20systems-0.png)
+- ![File-systems](./mindmaps/map-hard%20disk%20drives-0.png)
+- ![File-systems](./mindmaps/map-latency-0.png)
+- ![File-systems](./mindmaps/map-ssd-0.png)

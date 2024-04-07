@@ -7,7 +7,7 @@ def read_lecture_notes(filename):
         content = file.read()
     return content
 
-text = read_lecture_notes("myfile.txt")
+text = read_lecture_notes("generated-notes.txt")
 
 def generate_quiz(text, n_questions):
     previous_messages = [
