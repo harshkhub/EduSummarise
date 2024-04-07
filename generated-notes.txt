@@ -1,0 +1,57 @@
+- File systems are part of the foundation for database systems.
+- Understanding storage systems is crucial as data eventually goes there, with a key concept being the control of block devices.
+- Block devices have a typical block size, leading to reading and writing data in blocks rather than individual bytes.
+- File systems consist of files that can be accessed, with commands like 'stat' providing information on metadata and data within the files.
+- Metadata examples include the size of the file, showcasing the importance of data organization within storage systems.
+- File size is metadata, representing the size of a file in kilobytes.
+- Metadata includes information like the file name and the author who created the file, distinguishing it from the data within the file.
+- Understanding input/output operations (I/O) is crucial in data management, with one kilobyte equaling 1024 bytes, demonstrating the units used in storage systems.
+- Understanding block allocation is essential in storage systems, where each block typically contains a certain number of bytes.
+- The concept of block size is crucial as the system allocates a specific number of blocks for a file based on its size in kilobytes.
+- Persistent storage like SSD retains data even when powered off, contrasting with main memory where unsaved data is lost, emphasizing the importance of data persistence and storage systems in computing.
+- Main memory (RAM) is faster than SSD, which functions as a storage area for working data and needs data read into main memory for faster processing.
+- SSDs are faster than hard disk drives (HDDs) due to differences in access time and data transfer speed, with SSDs being more expensive but offering quicker performance.
+- Understanding access time, measured in nanoseconds, reveals the speed at which a storage device can transfer data, with lower nanosecond values indicating faster access times.
+- Access time in different devices can be measured in nanoseconds, microseconds, or milliseconds, with nanoseconds indicating faster access times typically seen in main memory or cache, while milliseconds are more common in hard disk drives.
+- Understanding Input/Output Operations Per Second (IOPS) is crucial for data storage systems, especially in SSDs where write operations involve erasing entire blocks before writing new data to improve performance and longevity.
+- Terms like bandwidth, latency, and IOPS are important in data storage discussions, with latency referring to the waiting time for data access similar to waiting in a doctor's office.
+- Latency in devices refers to the time required for the device to get ready before reading or writing data, affecting overall data access speed.
+- Bandwidth, measured in bits per second, determines how much data can be transmitted through a network or device, with higher bandwidth allowing for faster data transmission rates.
+- Understanding the concepts of latency and bandwidth is crucial in data management and storage systems, impacting data access speed and overall system performance.
+- Hard disk drives consist of platters with multiple surfaces called heads for reading and writing data, with each platter having two heads - one at the top and one at the bottom.
+- Each head can read and write data on both the top and bottom sides of a platter, with multiple platters stacked together forming a disk assembly in a magnetic storage device.
+- The rotation speed of hard disk drives is measured in RPM (rotations per minute), such as 10,000 RPM, indicating how quickly the disk spins to access data stored on its surfaces.
+- Hard disk drives typically rotate at speeds like 10,000 RPM, meaning each rotation takes about 6 milliseconds, influencing data access speed and latency.
+- Each platter in a hard disk drive has multiple sectors, with a sector being a small unit of data typically around 4KB in size, and data is read and written in entire sectors rather than individual bytes.
+- Sectors are essential for identifying and accessing specific data on a storage device like a hard disk drive, improving data organization and retrieval efficiency.
+- Hard disk drives use address schemes like CHS (Cylinder, Head, Sector) to locate and access data, with each cylinder containing concentric tracks all at the same distance from the center of the disk.
+- Each cylinder has multiple tracks, with the heads (read/write mechanisms) accessing specific tracks to read or write data, helping narrow down the search for data in terms of cylinders, heads, and sectors.
+- Understanding the CHS addressing scheme allows for precise data retrieval by specifying the cylinder, head, and sector numbers to locate the exact location of data on a hard disk drive for efficient access and storage management.
+- CHS addressing in hard disk drives involves specifying the Cylinder, Head (read/write mechanism), and Sector numbers to access data stored on the disk.
+- Each cylinder contains multiple tracks, with tracks consisting of sectors where data is stored, and identifying sectors allows for precise data retrieval and storage management on the disk.
+- Understanding the relationship between cylinders, tracks, and sectors helps in efficiently locating and accessing data on a hard disk drive, enhancing data organization and retrieval processes.
+- Rotational latency in hard disk drives occurs due to the waiting time before accessing a particular sector as the disk rotates, with worst-case latency involving waiting for almost a full rotation to access the desired sector.
+- Best-case latency is when the desired sector is under the read/write head at the start, leading to zero latency, and on average, the latency is approximately half of a full rotation to access sectors on the disk.
+- Understanding rotational latency helps in predicting data access times in hard disk drives, with the direction of rotation often being uniform for efficient data retrieval and storage management.
+- Changing the direction of rotation in a hard disk drive, such as switching from counterclockwise to clockwise, would require stopping and slowing down, leading to inefficiency, increased latency, and potential risks, similarly to driving a vehicle.
+- Seek latency in hard disk drives refers to the time taken to locate a specific track on a disk, with the best case scenario being zero latency when seeking an innermost track and the worst case involving seeking the outermost track, requiring more time and increasing latency.
+- The two types of latency in data storage systems start with "A", with "Access" latency for seeking data sectors and "Average" latency for the duration of time taken on average to access data on a storage device.
+- Bandwidth, typically measured in megabytes per second, indicates the rate of data transfer on a storage system, such as 50MB/s, with block sizes determining the number of blocks needed to store data efficiently, like 2,560 blocks for 10 megabytes on average.
+- In a sequential workflow with adjacent blocks, the time for data transmission is determined primarily by the bandwidth of the system, indicating the efficiency of data transfer speed over latency.
+- The completion time for transmitting data in this scenario can be calculated by dividing the volume of data by the bandwidth, yielding the total latency, which contributes to the overall transmission time.
+- Bandwidth dominates in a sequential workflow as the system spends more time on data transmission compared to latency, showcasing the importance of efficient data transfer rates for maximizing system performance and minimizing delays.
+- In a random workflow scenario with dispersed blocks, the time for data transmission is primarily impacted by latency rather than bandwidth, as the system may incur delays due to the need for seeking and rotating to access different data blocks.
+- The completion time for transmitting data in a random workflow can be determined by dividing the block size by the bandwidth, with the latency playing a crucial role in how long it takes to access and transmit data among diverse blocks.
+- Latency dominates in a random workflow as the system spends more time on seeking and waiting for data access compared to actual data transmission, highlighting the significance of efficient data management and retrieval processes to optimize system performance.
+- An SSD (Solid State Drive) consists of multiple memory chips, each containing a controller responsible for managing data storage and retrieval, along with individual memory chips that have main memory used for data storage.
+- In an SSD, memory chips contain multiple dies, with each die consisting of a number of blocks and pages, where each block may have multiple pages used for data storage and retrieval operations.
+- Understanding the concepts of blocks and pages in SSD storage is crucial, as data is written and read in pages, but erased on a block-level basis to ensure efficient data management and storage optimization within the SSD architecture.
+- Zooming into individual cells in an SSD reveals the structure of a floating gate transistor, where data is stored as a charge in the floating gate that represents either a 0 or 1 state.
+- The floating gate within the cell stores data as charges applied to the control gate, typically using positive charges to attract electrons, with an oxide layer serving as insulation to prevent electron leakage and ensure data integrity.
+- Applying a very high positive charge to the control gate in the floating gate transistor is essential for programming data, as the oxide layer requires a significant amount of charge to allow electrons to pass through and alter the data state stored in the cell.
+- In an SSD, the process of writing data involves applying a very high positive charge to the control gate to attract electrons through a process called Quantum Tunneling, representing the state of 0 or 1 based on the presence or absence of electrons in the floating gate cell.
+- Reading data in an SSD involves reading entire pages rather than individual cells to prevent interference and ensure data integrity, with the process of updating or changing data involving alterations in the charge applied to the control gate to accurately reflect the desired data state.
+- Changing data in an SSD from 0 to 1 or vice versa requires adjusting the charge to manipulate the presence of electrons in the floating gate, with positive and negative charges playing a crucial role in representing the different data states within the SSD cell structure.
+- In an SSD, data is typically updated by performing a full block erase rather than updating individual cells, a process known as block-level programming or erasing to ensure efficient and effective data management.
+- Programming data in an SSD involves changing data states within the cells from 1 to 0 using a high negative charge applied to the control gate, representing the absence of electrons in the cells, necessitating a block-level erase operation for data modifications.
+- Attempting to override or modify data in an SSD involves the process of programming, where changing data bits from 1 to 0 or vice versa requires careful control over the charge applied to the cells to ensure accurate data updates and integrity within the storage device.

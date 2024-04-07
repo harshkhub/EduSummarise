@@ -1,0 +1,40 @@
+file systems - are part of - the foundation
+data - goes - to storage systems
+file systems - consist of - files
+file systems - showcase - the importance of data organization
+file systems - include - Metadata
+data - Lost - Unsaved
+ssd - functions as - a storage area for working data
+ssd - needs data read into - main memory
+latency - refers to - waiting time for data access
+latency - refers to - time required for device to get ready
+bandwidth - determines - data transmission capacity
+latency - impacts - data access speed
+bandwidth - impacts - overall system performance
+hard disk drives - consist of - platters with multiple surfaces
+hard disk drives - have a rotation speed - measured in RPM (rotations per minute)
+hard disk drives - rotate at speeds - 10,000 RPM
+data - is read and written in - entire sectors
+hard disk drives - use - address schemes
+hard disk drives - involve - CHS addressing
+hard disk drives - rotate - causing worst-case latency
+file systems - have - best-case latency
+latency - is approximately half of - full rotation
+hard disk drives - have - seek latency
+bandwidth - measured in - megabytes per second
+bandwidth - indicates - rate of data transfer on a storage system
+bandwidth - dominates - sequential workflow
+latency - plays a crucial role in - how long it takes to access and transmit data
+data - can be accessed and transmitted among diverse blocks by - dividing the block size by the bandwidth
+latency - dominates - random workflow
+ssd - consists of - multiple memory chips
+ssd - contains - multiple dies
+data - is written and read - in pages
+data - is stored - as a charge in the floating gate
+ssd - involves - writing data
+ssd - involves - reading entire pages
+ssd - requires - adjusting the charge
+ssd - updated by - performing a full block erase
+data - typically - updated by performing a full block erase
+ssd - involves - changing data states within the cells from 1 to 0
+ssd - involves - programming
