@@ -1,4 +1,5 @@
 # EduSummarise
+A solution that helps students to quickly go through the lecture and understand the key points by gerating notes and mind maps from the lecture transcripts.
 
 ## Create notes from transcripts
 You can run the following command to create notes from :
