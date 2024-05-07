@@ -1,1 +1,7 @@
 *venv/
+
+# cache files and directories
+__pycache__/
+
+# vscode
+.vscode/

@@ -1,40 +1,171 @@
 file systems - are part of - the foundation
-data - goes - to storage systems
+database systems - have - file systems as part of their foundation
+lecture 3 - focuses on - file systems and their role in database systems
+storage systems - are crucial for - data to eventually go there
+key concept - is - control of block devices
+understanding - is crucial for - storage systems
+block devices - have - a typical block size
+reading and writing - use - blocks
+data - is read and written - in blocks rather than individual bytes
 file systems - consist of - files
+commands - like - 'stat'
+'stat' - providing - information on metadata and data within the files
+metadata - includes - size of the file
+data organization - is important within - storage systems
 file systems - showcase - the importance of data organization
-file systems - include - Metadata
-data - Lost - Unsaved
+file size - is - metadata
+metadata - represents - the size of a file
+file - is measured in - kilobytes
+metadata - includes - information
+metadata - distinguishes - file
+file - contains - data
+input/output operations - are crucial in - data management
+one kilobyte - equals - 1024 bytes
+storage systems - use - units of 1024 bytes
+block allocation - is essential in - storage systems
+each block - typically contains - a certain number of bytes
+understanding - is essential in - storage systems
+block size - is crucial - concept
+system - allocates - specific number of blocks
+file - based on - size in kilobytes
+data persistence - is emphasized by - persistent storage systems
+ssd - retains data - even when powered off
+main memory - contrasts with - persistent storage in terms of data persistence
+main memory - is faster than - SSD
 ssd - functions as - a storage area for working data
 ssd - needs data read into - main memory
-latency - refers to - waiting time for data access
+ssds - are faster than - hard disk drives (HDDs)
+differences in access time and data transfer speed - contribute to - SSDs being faster than HDDs
+ssds - are more expensive but offer - quicker performance
+access time - measured in - nanoseconds
+speed - revealed by - understanding access time
+lower nanosecond values - indicate - faster access times
+access time - can be measured in - nanoseconds, microseconds, or milliseconds
+nanoseconds - indicate faster access times typically seen in - main memory or cache
+milliseconds - are more common in - hard disk drives
+input/output operations per second (iops) - is crucial for - data storage systems
+write operations - involve - erasing entire blocks before writing new data
+ssds - improve - performance and longevity
+data storage - important in - data storage discussions
+latency - referring to - the waiting time for data access
+waiting - similar to - waiting in a doctor's office
 latency - refers to - time required for device to get ready
-bandwidth - determines - data transmission capacity
+device - affects - overall data access speed
+data - is read or written - during device latency
+bandwidth - determines - data transmission rates
+network or device - allows for - faster data transmission rates
+bandwidth - measured in - bits per second
 latency - impacts - data access speed
 bandwidth - impacts - overall system performance
+data management and storage systems - crucial in - understanding the concepts of latency and bandwidth
 hard disk drives - consist of - platters with multiple surfaces
-hard disk drives - have a rotation speed - measured in RPM (rotations per minute)
+platters - have - two heads
+heads - read and write - data
+head - read and write - data
+top and bottom sides - can - read and write data
+multiple platters - stacked together - form a disk assembly
+hard disk drives - have a rotation speed measured in - RPM (rotations per minute)
+10,000 rpm - indicates - how quickly the disk spins
+disk - accesses data stored on its surfaces - to access data stored on its surfaces
 hard disk drives - rotate at speeds - 10,000 RPM
+each rotation - takes about - 6 milliseconds
+data access speed and latency - are influenced by - the rotation speed of hard disk drives
+platter - has - multiple sectors
+sector - is - a small unit of data
 data - is read and written in - entire sectors
+sectors - are essential for - identifying and accessing specific data on a storage device
+sectors - improve - data organization and retrieval efficiency
+storage device - is a - hard disk drive
 hard disk drives - use - address schemes
-hard disk drives - involve - CHS addressing
-hard disk drives - rotate - causing worst-case latency
-file systems - have - best-case latency
+address schemes - locate and access - data
+each cylinder - contains - concentric tracks
+cylinder - has - multiple tracks
+heads - access - specific tracks
+search - is narrowed down by - cylinders, heads, and sectors
+chs addressing scheme - allows for - precise data retrieval
+cylinder, head, and sector numbers - are used to - locate the exact location of data
+hard disk drive - is used for - efficient access and storage management
+cylinder - CHS addressing - hard disk drives
+head - read/write mechanism - CHS addressing
+sector numbers - access - data stored on the disk
+cylinder - contains - multiple tracks
+tracks - consists of - sectors
+identifying - allows for - precise data retrieval and storage management
+cylinders - help in - efficiently locating and accessing data
+tracks - help in - efficiently locating and accessing data
+sectors - help in - efficiently locating and accessing data
+hard disk drives - experience - rotational latency
+waiting time - causes - rotational latency
+full rotation - required for - accessing desired sector
+best - case latency - is - zero latency
+desired sector - is under - read/write head
 latency - is approximately half of - full rotation
-hard disk drives - have - seek latency
+rotational latency - helps in predicting - data access times in hard disk drives
+direction of rotation - is often uniform for - efficient data retrieval
+storage management - is important for - efficient data storage
+hard disk drive - Changing direction of rotation - Inefficiency, increased latency, and potential risks
+stopping and slowing down - Result in - Inefficiency, increased latency, and potential risks
+driving a vehicle - Similar to - Changing the direction of rotation in a hard disk drive
+hard disk drives - have seek latency - when locating a specific track on a disk
+zero latency - is the best case scenario - when seeking an innermost track
+the outermost track - requires more time - and increases latency
+latency - has two types - "Access" and "Average"
+data storage systems - start with - "A"
+storage device - is used for - accessing data
 bandwidth - measured in - megabytes per second
 bandwidth - indicates - rate of data transfer on a storage system
+block sizes - determine - number of blocks needed to store data efficiently
+workflow - determined by - adjacent blocks
+data transmission - determined primarily by - bandwidth of the system
+data transfer speed - indicates - efficiency of data transfer speed over latency
+completion time - can be calculated by - dividing the volume of data by the bandwidth
+scenario - contributes to - the overall transmission time
+total latency - yields - the overall transmission time
 bandwidth - dominates - sequential workflow
+system - spends more time on - data transmission
+data transfer rates - maximize - system performance
+random workflow scenario - impacts - time for data transmission
+latency - impacts - time for data transmission
+seeking and rotating - delay - system
+completion time - can be determined by - dividing the block size by the bandwidth
 latency - plays a crucial role in - how long it takes to access and transmit data
-data - can be accessed and transmitted among diverse blocks by - dividing the block size by the bandwidth
-latency - dominates - random workflow
+data - can be transmitted among diverse blocks - in a random workflow
+system - spends more time on - seeking and waiting for data access
+data management and retrieval processes - optimize - system performance
+latency - dominates in - a random workflow
 ssd - consists of - multiple memory chips
+memory chips - contain - controller responsible for managing data storage and retrieval
+memory chips - have - main memory used for data storage
 ssd - contains - multiple dies
-data - is written and read - in pages
-data - is stored - as a charge in the floating gate
+die - consists of - blocks and pages
+block - has - multiple pages
+blocks and pages - crucial for - understanding concepts in SSD storage
+data - written and read in - pages
+data management and storage optimization - ensured by - erasing on a block-level basis
+ssd - contains - floating gate transistor
+data - stored as - charge
+floating gate - represents - 0 or 1 state
+floating gate - stores - data
+control gate - uses - positive charges
+oxide layer - serves as - insulation
+control gate - Applies - High positive charge
+floating gate transistor - Essential for - Programming data
+oxide layer - Requires - Significant amount of charge
 ssd - involves - writing data
+control gate - applies - high positive charge
+quantum tunneling - represents - state of 0 or 1
+reading - involves - reading entire pages
 ssd - involves - reading entire pages
+process - involves - updating or changing data
 ssd - requires - adjusting the charge
-ssd - updated by - performing a full block erase
-data - typically - updated by performing a full block erase
-ssd - involves - changing data states within the cells from 1 to 0
-ssd - involves - programming
+electrons - play a crucial role in - representing different data states
+ssd cell structure - has - positive and negative charges
+ssd - typically updated by - performing a full block erase
+data - updated by - block-level programming or erasing
+process - known as - block-level programming or erasing
+programming data - involves changing data states - within the cells
+cell - represents - absence of electrons
+data modifications - necessitate - block-level erase operation
+ssd - involves - process of programming
+data bits - changing - 1 to 0 or vice versa
+charge - applied to - cells
