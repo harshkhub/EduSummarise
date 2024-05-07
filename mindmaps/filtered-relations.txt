@@ -1,0 +1,66 @@
+storage systems - are crucial for - data to eventually go there
+understanding - is crucial for - storage systems
+data - is read and written - in blocks rather than individual bytes
+metadata - includes - size of the file
+data organization - is important within - storage systems
+file size - is - metadata
+metadata - represents - the size of a file
+file - is measured in - kilobytes
+metadata - includes - information
+metadata - distinguishes - file
+file - contains - data
+storage systems - use - units of 1024 bytes
+block allocation - is essential in - storage systems
+understanding - is essential in - storage systems
+system - allocates - specific number of blocks
+file - based on - size in kilobytes
+ssd - retains data - even when powered off
+ssd - functions as - a storage area for working data
+ssd - needs data read into - main memory
+milliseconds - are more common in - hard disk drives
+latency - referring to - the waiting time for data access
+latency - refers to - time required for device to get ready
+data - is read or written - during device latency
+bandwidth - determines - data transmission rates
+bandwidth - measured in - bits per second
+latency - impacts - data access speed
+bandwidth - impacts - overall system performance
+hard disk drives - consist of - platters with multiple surfaces
+heads - read and write - data
+head - read and write - data
+hard disk drives - have a rotation speed measured in - RPM (rotations per minute)
+hard disk drives - rotate at speeds - 10,000 RPM
+data - is read and written in - entire sectors
+sectors - are essential for - identifying and accessing specific data on a storage device
+sectors - improve - data organization and retrieval efficiency
+hard disk drives - use - address schemes
+address schemes - locate and access - data
+cylinder - CHS addressing - hard disk drives
+tracks - consists of - sectors
+sectors - help in - efficiently locating and accessing data
+hard disk drives - experience - rotational latency
+latency - is approximately half of - full rotation
+hard disk drives - have seek latency - when locating a specific track on a disk
+latency - has two types - "Access" and "Average"
+bandwidth - measured in - megabytes per second
+bandwidth - indicates - rate of data transfer on a storage system
+bandwidth - dominates - sequential workflow
+system - spends more time on - data transmission
+latency - impacts - time for data transmission
+seeking and rotating - delay - system
+latency - plays a crucial role in - how long it takes to access and transmit data
+data - can be transmitted among diverse blocks - in a random workflow
+system - spends more time on - seeking and waiting for data access
+latency - dominates in - a random workflow
+ssd - consists of - multiple memory chips
+ssd - contains - multiple dies
+data - written and read in - pages
+ssd - contains - floating gate transistor
+data - stored as - charge
+floating gate - stores - data
+ssd - involves - writing data
+ssd - involves - reading entire pages
+ssd - requires - adjusting the charge
+ssd - typically updated by - performing a full block erase
+data - updated by - block-level programming or erasing
+ssd - involves - process of programming
